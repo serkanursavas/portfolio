@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 const MainNavigation = () => {
   return (
-    <ul className="flex items-start gap-8">
+    <ul className="sm:flex sm:items-start sm:gap-8">
       <li>
         <NavLink
           to="/"
