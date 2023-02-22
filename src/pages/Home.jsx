@@ -4,7 +4,7 @@ import logo from '../assets/logoPrimary.png'
 
 const Home = () => {
   return (
-    <>
+    <div>
       <div className="mt-8 text-white text-[36px] font-medium">
         Serkan is a <span className="text-primary">web designer</span> and
         <span className="text-primary"> front-end developer</span>
@@ -33,7 +33,7 @@ const Home = () => {
           Currently working on <span className="text-white font-medium">Portfolio</span>
         </p>
       </div>
-    </>
+    </div>
   )
 }
 
