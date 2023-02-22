@@ -6,4 +6,7 @@
 
 :root {
   font-family: 'Fira Code', monospace;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
