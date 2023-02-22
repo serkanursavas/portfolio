@@ -10,9 +10,9 @@ const Home = () => {
         <span className="text-primary"> front-end developer</span>
       </div>
       <p className="mt-6 text-grey text-lg">He crafts responsive websites where technologies meet creativity</p>
-      <div className="mt-6 relative w-full h-[316px]">
+      <div className="mt-6 block relative w-full">
         <img
-          className="absolute top-0 w-full z-10 "
+          className="relative top-0 w-full z-10 "
           src={anonymous}
           alt="anon"
         />
