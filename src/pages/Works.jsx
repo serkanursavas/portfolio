@@ -1,4 +1,6 @@
-import portfolioss from '../assets/portfolioss.png'
+import ProjectItem from '../components/ProjectItem'
+
+import projects from '../store/projects'
 
 const Works = () => {
   return (
@@ -14,21 +16,17 @@ const Works = () => {
         <h2 className="text-3xl">
           <span className="text-primary">#</span>complete-apps
         </h2>
-        <div className="mt-10">
-          <div className="border border-grey flex flex-col">
-            <img src={portfolioss} />
-            <div className="flex flex-row gap-2 p-2 border-b border-grey text-grey font-light">
-              <span>Vue</span> <span>Ts</span> <span>Python</span>
-            </div>
-            <div className="flex flex-col p-4 gap-4">
-              <p className="text-2xl">Portfolio</p>
-              <p className="font-light text-grey">You're using it rn</p>
-
-              <button className="border border-primary w-fit py-1 px-5">
-                Github <span className="text-xl">≥</span>
-              </button>
-            </div>
-          </div>
+        <div className="mt-10 space-y-6">
+          {projects.map(project => (
+            <ProjectItem
+              key={project.id}
+              title={project.title}
+              thumbnail={project.thumbnail}
+              description={project.description}
+              tools={project.tools}
+              link={project.link}
+            />
+          ))}
         </div>
       </div>
     </>
