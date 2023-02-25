@@ -1,3 +1,5 @@
+import projects from '../store/projects'
+
 const ProjectItem = props => {
   return (
     <div className="border border-grey flex flex-col">
@@ -13,7 +15,7 @@ const ProjectItem = props => {
 
         <button className="border border-primary w-fit py-1 px-5">
           <a href={props.link}>
-            Github <span className="text-xl">≥</span>
+            {props.status} <span className="text-xl">≥</span>
           </a>
         </button>
       </div>

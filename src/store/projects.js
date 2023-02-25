@@ -1,4 +1,5 @@
 import portfolioss from '../assets/portfolioss.png'
+import bachira from '../assets/bachira.png'
 
 const projects = [
   {
@@ -6,8 +7,18 @@ const projects = [
     title: 'Portfolio',
     thumbnail: portfolioss,
     tools: ['Html', 'Css', 'React'],
-    description: "You're using it rn",
-    link: 'https://github.com/serkanursavas/portfolio'
+    description: "You're using it",
+    link: 'https://serkanursavas.info/',
+    status: 'Live'
+  },
+  {
+    id: 2,
+    title: 'Bachira Online Shopping',
+    thumbnail: bachira,
+    tools: ['Html', 'Css', 'React'],
+    description: 'Best place to buy everything',
+    link: 'https://github.com/serkanursavas?tab=repositories',
+    status: 'Github'
   }
 ]
 
