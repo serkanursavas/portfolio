@@ -1,8 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
-import dribble from '../assets/dribble.png'
+import linkedin from '../assets/linkedin.png'
 import github from '../assets/github.png'
-import figma from '../assets/figma.png'
 import './Header.css'
 
 const MainNavigation = props => {
@@ -60,18 +59,18 @@ const MainNavigation = props => {
         </li>
       </ul>
       <div className="mt-28 flex space-x-3 justify-center">
-        <img
-          src={github}
-          alt="github"
-        />
-        <img
-          src={dribble}
-          alt="dribble"
-        />
-        <img
-          src={figma}
-          alt="figma"
-        />
+        <a href="https://github.com/serkanursavas">
+          <img
+            src={github}
+            alt="github"
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/serkanursavas/">
+          <img
+            src={linkedin}
+            alt="linkedin"
+          />
+        </a>
       </div>
     </div>
   )
