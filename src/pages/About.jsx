@@ -2,6 +2,8 @@ import PageTitle from '../components/PageTitle'
 import dots1 from '../assets/about-dots1.png'
 import dots2 from '../assets/about-dots2.png'
 import aboutPic from '../assets/about.png'
+import skills from '../store/about'
+import SkillsItems from '../components/SkillsItems'
 
 const About = () => {
   return (
@@ -12,7 +14,7 @@ const About = () => {
       />
       <div className="mt-16 flex gap-1 justify-between items-end">
         <p className="basis-3/5 leading-6 text-grey font-light text-sm ">
-          Hello, i'm Elias! I'm a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive
+          Hello, i'm Serkan! I'm a self-taught front-end developer based in Adana, Turket. I can develop responsive
           websites from scratch and raise them into modern user-friendly web experiences.
         </p>
         <div className="relative max-w-[170px] basis-2/5">
@@ -43,14 +45,12 @@ const About = () => {
           <span className="text-primary">#</span>skills
         </h2>
         <div className="mt-6 grid grid-cols-2 gap-4">
-          <div className="border border-grey">
-            <h6 className="p-2 border-b border-grey font-medium">Languages</h6>
-            <div className="p-2 text-grey font-light flex gap-2 flex-wrap">
-              <span>Typescript</span>
-              <span>Lua</span>
-              <span>Python</span>
-            </div>
-          </div>
+          {skills.map((item, index) => (
+            <SkillsItems
+              title={item.title}
+              skill={item.skills}
+            />
+          ))}
         </div>
       </div>
       <div className="mt-16 text-white">
@@ -59,17 +59,18 @@ const About = () => {
         </h2>
         <div className="mt-6 text-grey space-y-4">
           <div className="border border-grey p-2">
-            <p>I like winter more than summer</p>
-          </div>
-          <div className="border border-grey p-2">
             <p>
-              I like <span>pizza</span> and <span>pasta</span>
+              i like to work more at <span className="text-white">night</span> than during the day.
             </p>
           </div>
           <div className="border border-grey p-2">
             <p>
-              I was in <span>Poland</span> and <span>Turkey</span>
+              I have only been to <span className="text-white">Adana</span> and{' '}
+              <span className="text-white">Istanbul</span> so far.
             </p>
+          </div>
+          <div className="border border-grey p-2">
+            <p>I am still in university.</p>
           </div>
         </div>
       </div>
