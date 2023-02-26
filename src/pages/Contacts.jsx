@@ -18,7 +18,7 @@ const Contacts = () => {
         src={dots31}
         alt="dots31"
       />
-      <div className="absolute -left-12 bottom-24 w-[80px] h-[80px] border border-grey"></div>
+      <div className="absolute -left-12 bottom-16 w-[80px] h-[80px] border border-grey"></div>
 
       <div className="mt-16 text-grey font-light">
         <p>
