@@ -13,7 +13,7 @@ const ProjectItem = props => {
         <p className="text-2xl">{props.title}</p>
         <p className="font-light text-grey">{props.description}</p>
 
-        <button className="border border-primary w-fit py-1 px-5">
+        <button className="border border-primary w-fit py-1 px-5 hover:bg-[#C778DD] hover:bg-opacity-20">
           <a
             href={props.link}
             className="flex items-center gap-2"
