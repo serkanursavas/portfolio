@@ -60,7 +60,7 @@ const About = () => {
         <div className="mt-6 text-grey space-y-4">
           <div className="border border-grey p-2">
             <p>
-              i like to work more at <span className="text-white">night</span> than during the day.
+              I like to work more at <span className="text-white">night</span> than during the day.
             </p>
           </div>
           <div className="border border-grey p-2">
