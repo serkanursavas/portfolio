@@ -1,4 +1,4 @@
-import projects from '../store/projects'
+import playIcon from '../assets/playIcon.png'
 
 const ProjectItem = props => {
   return (
@@ -14,8 +14,18 @@ const ProjectItem = props => {
         <p className="font-light text-grey">{props.description}</p>
 
         <button className="border border-primary w-fit py-1 px-5">
-          <a href={props.link}>
-            {props.status} <span className="text-xl">≥</span>
+          <a
+            href={props.link}
+            className="flex items-center gap-2"
+          >
+            {props.status}
+            <span className="text-xl">
+              <img
+                className="w-[16px]"
+                src={playIcon}
+                alt="play"
+              />
+            </span>
           </a>
         </button>
       </div>
