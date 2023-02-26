@@ -37,7 +37,7 @@ const MainNavigation = props => {
         </li>
         <li>
           <NavLink
-            to="/aboutme"
+            to="/about"
             style={({ isActive }) => ({
               color: isActive ? 'white' : undefined
             })}
