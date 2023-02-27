@@ -2,9 +2,15 @@ import anonymous from '../assets/anony.png'
 import dots from '../assets/dots.png'
 import logo from '../assets/logoPrimary.png'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
+import ProjectItem from '../components/ProjectItem'
+import projects from '../store/projects'
+
 const Home = () => {
   return (
-    <div>
+    <div className="w-full">
       <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-8 sm:items-center">
         <div className="mt-8 text-white text-[36px] font-medium">
           Serkan is a <span className="text-primary">web designer</span> and
@@ -36,6 +42,54 @@ const Home = () => {
               Currently working on <span className="text-white font-medium">Portfolio</span>
             </p>
           </div>
+        </div>
+      </div>
+
+      <div className="hidden sm:block relative z-20 text-2xl text-white mt-24 mx-auto p-8 border border-grey w-fit">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+        <div className="absolute -top-5 left-5 bg-background w-[39px] h-[39px] z-10">
+          <p className="absolute top-6 left-0 text-[64px] text-grey ">“</p>
+        </div>
+        <div className="absolute -bottom-5 right-5 bg-background w-[39px] h-[39px] z-10">
+          <p className="absolute top-6 left-0 text-[64px] text-grey">“</p>
+        </div>
+        <p className="absolute p-4 border border-grey -right-[1px] -bottom-[66px]">Anonymous</p>
+      </div>
+
+      {/* Projects */}
+      <div className="hidden sm:block">
+        <div className="mt-36 text-white flex items-center justify-between space-x-4">
+          <div className="flex space-x-4 items-center">
+            <p className="font-medium text-[36px]">
+              <span className="text-primary">#</span>
+              projects
+            </p>
+            <div className=" w-[510px] h-[1px] bg-primary"></div>
+          </div>
+          <Link to="/works">
+            <div className="flex">
+              <p>
+                View All{' '}
+                <FontAwesomeIcon
+                  className="font-thin"
+                  icon={faArrowRight}
+                />
+              </p>
+            </div>
+          </Link>
+        </div>
+        <div className="mt-12 w-full sm:grid grid-cols-3 gap-8">
+          {projects.map(project => (
+            <ProjectItem
+              key={project.id}
+              title={project.title}
+              thumbnail={project.thumbnail}
+              description={project.description}
+              tools={project.tools}
+              link={project.link}
+              status={project.status}
+            />
+          ))}
         </div>
       </div>
     </div>
