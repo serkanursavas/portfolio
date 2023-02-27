@@ -2,6 +2,8 @@ import anonymous from '../assets/anony.png'
 import dots from '../assets/dots.png'
 import logo from '../assets/logoPrimary.png'
 import aboutPic from '../assets/about.png'
+import discordLogo from '../assets/discord.png'
+import mailLogo from '../assets/mail.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -127,9 +129,9 @@ const Home = () => {
             <div className="w-24 h-24 border border-grey absolute top-0 right-6"></div>
             <div className="w-16 h-16 border border-grey absolute bottom-6 right-0"></div>
           </div>
-          <div className="h-[280px] max-[1020px]:h-[400px] flex flex-end flex-wrap-reverse flex-col gap-5 mt-12">
+          <div className="h-[320px] max-[1020px]:h-[400px] flex flex-end flex-wrap-reverse flex-col gap-5 mt-8">
             {skills.map((skill, index) => (
-              <div className="w-[150px] text-white">
+              <div className="w-[170px] text-white text-lg">
                 <SkillsItems
                   key={index}
                   title={skill.title}
@@ -142,7 +144,7 @@ const Home = () => {
       </div>
 
       {/* About */}
-      <div className="hidden sm:block mt-32">
+      <div className="hidden sm:block mt-20">
         <div className="flex gap-32 max-[1000px]:gap-2 max-[950px]:flex-col">
           <div className="basis-2/3 mt-6">
             <div className="mt-16 text-white flex items-center justify-between space-x-4">
@@ -158,15 +160,55 @@ const Home = () => {
               Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana, Turkey. I can develop responsive
               websites from scratch and raise them into modern user-friendly web experiences.
             </p>
-            <button className="hidden sm:block py-2 px-4 text-base border border-primary mt-6 text-white">
-              Read more <FontAwesomeIcon icon={faArrowRight} />
-            </button>
+            <Link to="/about">
+              <button className="hidden sm:block py-2 px-4 text-base border border-primary mt-6 text-white">
+                Read more <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            </Link>
           </div>
           <img
             className="max-[950px]:hidden"
             src={aboutPic}
             alt=""
           />
+        </div>
+      </div>
+
+      {/* Contacts */}
+      <div className="hidden sm:block">
+        <div className="mt-36 text-white flex items-center justify-between space-x-4">
+          <div className="flex space-x-4 items-center">
+            <p className="font-medium text-[36px]">
+              <span className="text-primary">#</span>
+              contacts
+            </p>
+            <div className=" w-[125px] h-[1px] bg-primary"></div>
+          </div>
+        </div>
+        <div className="flex text-grey gap-24 mt-6">
+          <p className="text-lg w-[500px] ">
+            I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate to
+            contact me
+          </p>
+          <div className="border border-grey p-4 space-y-2 w-fit mt-12">
+            <h6 className="text-white font-normal">Message me here</h6>
+            <div className="flex space-x-2 max-[400px]:text-sm max-[350px]:text-[11px]">
+              <img
+                className="object-contain"
+                src={discordLogo}
+                alt="discord"
+              />
+              <p>Serkan#2792</p>
+            </div>
+            <div className="flex space-x-2 max-[400px]:text-sm max-[350px]:text-[11px] min-w-[265px] h-fit">
+              <img
+                className="object-contain"
+                src={mailLogo}
+                alt="mail"
+              />
+              <p>serkan.ursavas@icloud.com</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
