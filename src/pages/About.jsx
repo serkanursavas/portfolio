@@ -13,8 +13,8 @@ const About = () => {
         subtitle="Who am i?"
       />
       <div className="mt-16 flex gap-1 justify-between items-end">
-        <p className="basis-3/5 leading-6 text-grey font-light text-sm ">
-          Hello, i'm Serkan! I'm a self-taught front-end developer based in Adana, Turket. I can develop responsive
+        <p className="basis-3/5 leading-6 max-[330px]:text-xs text-grey font-light text-sm ">
+          Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana, Turkey. I can develop responsive
           websites from scratch and raise them into modern user-friendly web experiences.
         </p>
         <div className="relative max-w-[170px] basis-2/5">
@@ -35,7 +35,7 @@ const About = () => {
           />
         </div>
       </div>
-      <p className="mt-4  text-grey font-light text-sm">
+      <p className="mt-4  text-grey font-light text-sm max-[330px]:text-xs">
         Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been
         helping various clients to establish their presence online. I always strive to learn about the newest
         technologies and frameworks.
@@ -44,20 +44,21 @@ const About = () => {
         <h2 className="text-2xl">
           <span className="text-primary">#</span>skills
         </h2>
-        <div className="mt-6 grid grid-cols-2 gap-4">
+        <div className="mt-6 grid grid-cols-2 gap-4 text-sm font-light max-[330px]:text-xs">
           {skills.map((item, index) => (
             <SkillsItems
+              key={index}
               title={item.title}
               skill={item.skills}
             />
           ))}
         </div>
       </div>
-      <div className="mt-16 text-white">
+      <div className="mt-16 text-white ">
         <h2 className="text-2xl">
           <span className="text-primary">#</span>my-fun-facts
         </h2>
-        <div className="mt-6 text-grey space-y-4">
+        <div className="mt-6 text-grey space-y-4 text-sm font-light max-[330px]:text-xs">
           <div className="border border-grey p-2">
             <p>
               I like to work more at <span className="text-white">night</span> than during the day.

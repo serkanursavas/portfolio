@@ -10,13 +10,13 @@ const ProjectItem = props => {
         ))}
       </div>
       <div className="flex flex-col p-4 gap-4">
-        <p className="text-2xl">{props.title}</p>
+        <p className="text-2xl text-white">{props.title}</p>
         <p className="font-light text-grey">{props.description}</p>
 
         <button className="border border-primary w-fit py-1 px-5 hover:bg-[#C778DD] hover:bg-opacity-20">
           <a
             href={props.link}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2  text-white"
           >
             {props.status}
             <span className="text-xl">
