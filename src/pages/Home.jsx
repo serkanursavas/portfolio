@@ -143,7 +143,7 @@ const Home = () => {
 
       {/* About */}
       <div className="hidden sm:block mt-32">
-        <div className="flex gap-32">
+        <div className="flex gap-32 max-[1000px]:gap-2 max-[950px]:flex-col">
           <div className="basis-2/3 mt-6">
             <div className="mt-16 text-white flex items-center justify-between space-x-4">
               <div className="flex space-x-4 items-center">
@@ -163,6 +163,7 @@ const Home = () => {
             </button>
           </div>
           <img
+            className="max-[950px]:hidden"
             src={aboutPic}
             alt=""
           />
