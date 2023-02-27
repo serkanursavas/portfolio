@@ -1,6 +1,7 @@
 import anonymous from '../assets/anony.png'
 import dots from '../assets/dots.png'
 import logo from '../assets/logoPrimary.png'
+import aboutPic from '../assets/about.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -137,6 +138,34 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* About */}
+      <div className="hidden sm:block mt-32">
+        <div className="flex gap-32">
+          <div className="basis-2/3 mt-6">
+            <div className="mt-16 text-white flex items-center justify-between space-x-4">
+              <div className="flex space-x-4 items-center">
+                <p className="font-medium text-[36px]">
+                  <span className="text-primary">#</span>
+                  about-me
+                </p>
+                <div className=" w-[325px] h-[1px] bg-primary"></div>
+              </div>
+            </div>
+            <p className="mt-6 text-grey font-light text-lg leading-8">
+              Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana, Turkey. I can develop responsive
+              websites from scratch and raise them into modern user-friendly web experiences.
+            </p>
+            <button className="hidden sm:block py-2 px-4 text-base border border-primary mt-6 text-white">
+              Read more <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+          </div>
+          <img
+            src={aboutPic}
+            alt=""
+          />
         </div>
       </div>
     </div>
