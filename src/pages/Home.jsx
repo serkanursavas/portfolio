@@ -7,6 +7,8 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import ProjectItem from '../components/ProjectItem'
 import projects from '../store/projects'
+import skills from '../store/about'
+import SkillsItems from '../components/SkillsItems'
 
 const Home = () => {
   return (
@@ -90,6 +92,51 @@ const Home = () => {
               status={project.status}
             />
           ))}
+        </div>
+      </div>
+
+      {/* Skilss */}
+      <div className="hidden sm:block">
+        <div className="mt-36 text-white flex items-center justify-between space-x-4">
+          <div className="flex space-x-4 items-center">
+            <p className="font-medium text-[36px]">
+              <span className="text-primary">#</span>
+              skills
+            </p>
+            <div className=" w-[240px] h-[1px] bg-primary"></div>
+          </div>
+        </div>
+        <div className="mt-3 ml-8 flex justify-between">
+          <div className="relative w-[350px] h-[280px]">
+            <img
+              className="w-[63px] h-[63px] absolute top-6"
+              src={dots}
+              alt="dots"
+            />
+            <img
+              className="w-[63px] h-[63px] absolute left-[50%] top-[50%]"
+              src={dots}
+              alt="dots"
+            />
+            <img
+              className="w-[120px] h-[120px] absolute bottom-0 left-5"
+              src={logo}
+              alt="logo"
+            />
+            <div className="w-24 h-24 border border-grey absolute top-0 right-6"></div>
+            <div className="w-16 h-16 border border-grey absolute bottom-6 right-0"></div>
+          </div>
+          <div className="h-[280px] max-[1020px]:h-[400px] flex flex-end flex-wrap-reverse flex-col gap-5 mt-12">
+            {skills.map((skill, index) => (
+              <div className="w-[150px] text-white">
+                <SkillsItems
+                  key={index}
+                  title={skill.title}
+                  skill={skill.skills}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -47,6 +47,7 @@ const About = () => {
         <div className="mt-6 grid grid-cols-2 gap-4 text-sm font-light max-[330px]:text-xs">
           {skills.map((item, index) => (
             <SkillsItems
+              key={index}
               title={item.title}
               skill={item.skills}
             />
