@@ -12,39 +12,65 @@ const About = () => {
         title="about-me"
         subtitle="Who am i?"
       />
-      <div className="mt-16 flex gap-1 justify-between items-end">
-        <p className="basis-3/5 leading-6 max-[330px]:text-xs text-grey font-light text-sm ">
-          Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana, Turkey. I can develop responsive
-          websites from scratch and raise them into modern user-friendly web experiences.
-        </p>
-        <div className="relative max-w-[170px] basis-2/5">
-          <img
-            className="absolute right-2 top-28 max-w-[52px]"
-            src={dots1}
-            alt="Dots"
-          />
-          <img
-            className="absolute -left-2 top-8 max-w-[42px]"
-            src={dots2}
-            alt="Dots"
-          />
-          <img
-            className=""
-            src={aboutPic}
-            alt="About-Me"
-          />
+      <div className="sm:grid sm:grid-cols-2 sm:gap-36 sm:mt-10">
+        <div className="sm:flex sm:flex-col sm:justify-center">
+          <div className="mt-16 sm:mt-0 flex gap-1 justify-between items-end ">
+            <p className="basis-3/5 sm:basis-auto leading-6 max-[330px]:text-xs text-grey font-light  text-sm sm:text-base sm:leading-7">
+              Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana, Turkey. I can develop responsive
+              websites from scratch and raise them into modern user-friendly web experiences.
+            </p>
+            <div className="relative max-w-[170px] basis-2/5 sm:hidden">
+              <img
+                className="absolute right-2 top-28 max-w-[52px]"
+                src={dots1}
+                alt="Dots"
+              />
+              <img
+                className="absolute -left-2 top-8 max-w-[42px]"
+                src={dots2}
+                alt="Dots"
+              />
+              <img
+                className=""
+                src={aboutPic}
+                alt="About-Me"
+              />
+              <div className="w-32 h-[1px] bg-primary absolute bottom-0 left-4"></div>
+            </div>
+          </div>
+          <p className="mt-4  text-grey font-light text-sm max-[330px]:text-xs sm:text-base sm:leading-7">
+            Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been
+            helping various clients to establish their presence online. I always strive to learn about the newest
+            technologies and frameworks.
+          </p>
+        </div>
+        <div className="relative">
+          <div className="hidden sm:block relative w-full">
+            <img
+              className="absolute right-32 top-72 max-w-[95px]"
+              src={dots1}
+              alt="Dots"
+            />
+            <img
+              className="absolute -left-2 top-16 max-w-[90px]"
+              src={dots2}
+              alt="Dots"
+            />
+            <img
+              className=""
+              src={aboutPic}
+              alt="About-Me"
+            />
+            <div className="w-72 h-[1px] bg-primary absolute bottom-0 left-10  "></div>
+          </div>
         </div>
       </div>
-      <p className="mt-4  text-grey font-light text-sm max-[330px]:text-xs">
-        Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been
-        helping various clients to establish their presence online. I always strive to learn about the newest
-        technologies and frameworks.
-      </p>
+
       <div className="mt-16 text-white">
         <h2 className="text-2xl">
           <span className="text-primary">#</span>skills
         </h2>
-        <div className="mt-6 grid grid-cols-2 gap-4 text-sm font-light max-[330px]:text-xs">
+        <div className="mt-6 grid grid-cols-2 gap-4 text-sm font-light max-[330px]:text-xs sm:grid-cols-5">
           {skills.map((item, index) => (
             <SkillsItems
               key={index}
@@ -58,8 +84,8 @@ const About = () => {
         <h2 className="text-2xl">
           <span className="text-primary">#</span>my-fun-facts
         </h2>
-        <div className="mt-6 text-grey space-y-4 text-sm font-light max-[330px]:text-xs">
-          <div className="border border-grey p-2">
+        <div className="mt-6 text-grey space-y-4 text-sm font-light max-[330px]:text-xs sm:flex sm:space-y-0 sm:flex-wrap sm:gap-5">
+          <div className="border border-grey p-2 sm:w-fit">
             <p>
               I like to work more at <span className="text-white">night</span> than during the day.
             </p>

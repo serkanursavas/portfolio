@@ -1,3 +1,5 @@
+import TypingEffect from '../components/UI/TypingEffect'
+
 const PageTitle = props => {
   return (
     <div className="mt-8 text-white">
@@ -5,7 +7,9 @@ const PageTitle = props => {
         <span className="text-primary">/</span>
         {props.title}
       </p>
-      <p className="mt-1 font-light">{props.subtitle}</p>
+      <p className="mt-1 font-light">
+        <TypingEffect strings={[props.subtitle]} />
+      </p>
     </div>
   )
 }
