@@ -1,4 +1,5 @@
-import playIcon from '../assets/playIcon.png'
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import ButtonPrimary from '../components/UI/ButtonPrimary'
 
 const ProjectItem = props => {
   return (
@@ -13,21 +14,11 @@ const ProjectItem = props => {
         <p className="text-2xl text-white">{props.title}</p>
         <p className="font-light text-grey">{props.description}</p>
 
-        <button className="border border-primary w-fit py-1 px-5 hover:bg-[#C778DD] hover:bg-opacity-20">
-          <a
-            href={props.link}
-            className="flex items-center gap-2  text-white"
-          >
-            {props.status}
-            <span className="text-xl">
-              <img
-                className="w-[16px]"
-                src={playIcon}
-                alt="play"
-              />
-            </span>
-          </a>
-        </button>
+        <ButtonPrimary
+          link={props.link}
+          name={props.title}
+          icon={faPlay}
+        />
       </div>
     </div>
   )

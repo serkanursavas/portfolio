@@ -18,7 +18,7 @@ const projects = [
     tools: ['Html', 'Css', 'React'],
     description: 'Best place to buy everything',
     link: 'https://github.com/serkanursavas?tab=repositories',
-    status: 'Github'
+    title: 'Github'
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const projects = [
     tools: ['Html', 'Css', 'React'],
     description: "You're using it",
     link: 'https://serkanursavas.info/',
-    status: 'Live'
+    title: 'Live'
   }
 ]
 

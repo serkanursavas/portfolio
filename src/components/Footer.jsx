@@ -1,5 +1,5 @@
-import githubLogo from '../assets/github.png'
-import linkedinLogo from '../assets/linkedin.png'
+import github from '../assets/github.png'
+import linkedin from '../assets/linkedin.png'
 import union from '../assets/union.png'
 
 const Footer = () => {
@@ -24,16 +24,18 @@ const Footer = () => {
           <div className="text-center">
             <p className="text-2xl">Media</p>
             <div className="flex mt-3 gap-2">
-              <img
-                className="w-[45px] h-[45px]"
-                src={githubLogo}
-                alt="logo"
-              />
-              <img
-                className="w-[45px] h-[45px]"
-                src={linkedinLogo}
-                alt="logo"
-              />
+              <a href="https://github.com/serkanursavas">
+                <img
+                  src={github}
+                  alt="github"
+                />
+              </a>
+              <a href="https://www.linkedin.com/in/serkanursavas/">
+                <img
+                  src={linkedin}
+                  alt="linkedin"
+                />
+              </a>
             </div>
           </div>
         </div>

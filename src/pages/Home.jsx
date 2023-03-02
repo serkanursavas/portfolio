@@ -4,6 +4,8 @@ import logo from '../assets/logoPrimary.png'
 import aboutPic from '../assets/about.png'
 import discordLogo from '../assets/discord.png'
 import mailLogo from '../assets/mail.png'
+import dots1 from '../assets/dots36.png'
+import dots2 from '../assets/dots.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -12,16 +14,24 @@ import ProjectItem from '../components/ProjectItem'
 import projects from '../store/projects'
 import skills from '../store/about'
 import SkillsItems from '../components/SkillsItems'
+import ButtonPrimary from '../components/UI/ButtonPrimary'
+import Background from '../components/UI/Background'
 
 const Home = () => {
   return (
     <div className="w-full">
       <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-8 sm:items-center">
-        <div className="mt-8 text-white text-[36px] font-medium">
+        <div className="mt-8 text-white text-[36px] space-y-6 font-medium">
           Serkan is a <span className="text-primary">web designer</span> and
           <span className="text-primary"> front-end developer</span>
-          <p className="mt-6 text-grey text-lg">He crafts responsive websites where technologies meet creativity</p>
-          <button className="hidden sm:block py-2 px-4 text-base border border-primary mt-6">Contact Me !!</button>
+          <p className=" text-grey text-lg">He crafts responsive websites where technologies meet creativity</p>
+          <div className="hidden sm:block">
+            <ButtonPrimary
+              name="Contact me!!"
+              link="/contacts"
+              icon=""
+            />
+          </div>
         </div>
         <div>
           <div className="mt-16 sm:mt-4 block relative w-full">
@@ -75,10 +85,12 @@ const Home = () => {
             <div className="flex">
               <p>
                 View All{' '}
-                <FontAwesomeIcon
-                  className="font-thin"
-                  icon={faArrowRight}
-                />
+                <span>
+                  <FontAwesomeIcon
+                    className="font-thin"
+                    icon={faArrowRight}
+                  />
+                </span>
               </p>
             </div>
           </Link>
@@ -92,7 +104,7 @@ const Home = () => {
               description={project.description}
               tools={project.tools}
               link={project.link}
-              status={project.status}
+              status={project.title}
             />
           ))}
         </div>
@@ -131,9 +143,11 @@ const Home = () => {
           </div>
           <div className="h-[320px] max-[1020px]:h-[400px] flex flex-end flex-wrap-reverse flex-col gap-5 mt-8">
             {skills.map((skill, index) => (
-              <div className="w-[170px] text-white text-lg">
+              <div
+                key={index}
+                className="w-[170px] text-white text-lg"
+              >
                 <SkillsItems
-                  key={index}
                   title={skill.title}
                   skill={skill.skills}
                 />
@@ -146,7 +160,7 @@ const Home = () => {
       {/* About */}
       <div className="hidden sm:block mt-20">
         <div className="flex gap-32 max-[1000px]:gap-2 max-[950px]:flex-col">
-          <div className="basis-2/3 mt-6">
+          <div className="basis-2/3 mt-6 space-y-6">
             <div className="mt-16 text-white flex items-center justify-between space-x-4">
               <div className="flex space-x-4 items-center">
                 <p className="font-medium text-[36px]">
@@ -160,17 +174,31 @@ const Home = () => {
               Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana, Turkey. I can develop responsive
               websites from scratch and raise them into modern user-friendly web experiences.
             </p>
-            <Link to="/about">
-              <button className="hidden sm:block py-2 px-4 text-base border border-primary mt-6 text-white">
-                Read more <FontAwesomeIcon icon={faArrowRight} />
-              </button>
-            </Link>
+
+            <ButtonPrimary
+              name="Read More"
+              link="/about"
+              icon={faArrowRight}
+            />
           </div>
-          <img
-            className="max-[950px]:hidden"
-            src={aboutPic}
-            alt=""
-          />
+          <div className="relative">
+            <img
+              className="max-[950px]:hidden"
+              src={aboutPic}
+              alt=""
+            />
+            <img
+              className="absolute right-12 top-48 max-w-[52px] rotate-[90deg]"
+              src={dots1}
+              alt="Dots"
+            />
+            <img
+              className="absolute -left-2 top-8 w-[60px]"
+              src={dots2}
+              alt="Dots"
+            />
+            <div className="w-64 h-[1px] bg-primary absolute bottom-0 left-8"></div>
+          </div>
         </div>
       </div>
 
@@ -211,6 +239,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Background />
     </div>
   )
 }
