@@ -24,10 +24,10 @@ const projects = [
     id: 3,
     title: 'Coming Soon',
     thumbnail: null,
-    tools: ['Html', 'Css', 'React'],
-    description: "You're using it",
-    link: 'https://serkanursavas.info/',
-    status: 'Live'
+    tools: ['Null'],
+    description: '',
+    link: '',
+    status: 'null'
   }
 ]
 

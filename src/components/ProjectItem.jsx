@@ -1,36 +1,38 @@
-import playIcon from '../assets/playIcon.png'
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import ButtonPrimary from '../components/UI/ButtonPrimary'
+import TypingEffect from './UI/TypingEffect'
 
 const ProjectItem = props => {
-  return (
-    <div className="border border-grey flex flex-col">
-      <img src={props.thumbnail} />
-      <div className="flex flex-row gap-2 p-2 border-b border-t border-grey text-grey font-light">
-        {props.tools.map((tool, index) => (
-          <span key={index}>{tool}</span>
-        ))}
-      </div>
-      <div className="flex flex-col p-4 gap-4">
-        <p className="text-2xl text-white">{props.title}</p>
-        <p className="font-light text-grey">{props.description}</p>
+  if (props.status !== 'null') {
+    return (
+      <div className="border border-grey flex flex-col">
+        <img src={props.thumbnail} />
+        <div className="flex flex-row gap-2 p-2 border-b border-t border-grey text-grey font-light">
+          {props.tools.map((tool, index) => (
+            <span key={index}>{tool}</span>
+          ))}
+        </div>
+        <div className="flex flex-col p-4 gap-4">
+          <p className="text-2xl text-white">{props.title}</p>
+          <p className="font-light text-grey">{props.description}</p>
 
-        <button className="border border-primary w-fit py-1 px-5 hover:bg-[#C778DD] hover:bg-opacity-20">
-          <a
-            href={props.link}
-            className="flex items-center gap-2  text-white"
-          >
-            {props.status}
-            <span className="text-xl">
-              <img
-                className="w-[16px]"
-                src={playIcon}
-                alt="play"
-              />
-            </span>
-          </a>
-        </button>
+          <ButtonPrimary
+            link={props.link}
+            name={props.status}
+            icon={faPlay}
+          />
+        </div>
       </div>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div className="hidden sm:flex border border-grey flex-col justify-center items-center">
+        <p className="text-primary text-3xl">
+          <TypingEffect strings={['New Project', 'Coming soon..']} />
+        </p>
+      </div>
+    )
+  }
 }
 
 export default ProjectItem
