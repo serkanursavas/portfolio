@@ -104,7 +104,7 @@ const Home = () => {
               description={project.description}
               tools={project.tools}
               link={project.link}
-              status={project.title}
+              status={project.status}
             />
           ))}
         </div>

@@ -4,7 +4,7 @@ import dots36 from '../../assets/dots36.png'
 
 const Background = () => {
   return (
-    <>
+    <div className="hidden sm:block">
       <div className="absolute -right-9 top-[700px] w-[90px] h-[90px] border border-grey"></div>
       <img
         className="max-[375px]:hidden w-[60px] absolute -left-[30px] top-[1050px]"
@@ -23,7 +23,7 @@ const Background = () => {
         src={dots31}
         alt="dots31"
       />
-    </>
+    </div>
   )
 }
 
