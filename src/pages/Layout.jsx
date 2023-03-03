@@ -5,6 +5,7 @@ import LayoutCard from '../components/UI/LayoutCard'
 import Header from '../components/Header'
 import MainNavigation from '../components/MainNavigation'
 import Footer from '../components/Footer'
+import Background from '../components/UI/Background'
 
 const Layout = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,7 +15,7 @@ const Layout = () => {
   }
 
   return (
-    <>
+    <div className="relative overflow-hidden">
       <LayoutCard>
         <Header
           toggleMenu={toggleMenu}
@@ -30,9 +31,11 @@ const Layout = () => {
 
         {!isOpen && <Outlet />}
       </LayoutCard>
-
+      <div className="hidden lg:block">
+        <Background />
+      </div>
       {!isOpen && <Footer />}
-    </>
+    </div>
   )
 }
 

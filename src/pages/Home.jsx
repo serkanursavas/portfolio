@@ -20,7 +20,7 @@ import Background from '../components/UI/Background'
 const Home = () => {
   return (
     <div className="w-full">
-      <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-8 sm:items-center">
+      <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-8 sm:items-center lg:gap-24">
         <div className="mt-8 text-white text-[36px] space-y-6 font-medium">
           Serkan is a <span className="text-primary">web designer</span> and
           <span className="text-primary"> front-end developer</span>
@@ -34,19 +34,19 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <div className="mt-16 sm:mt-4 block relative w-full">
+          <div className="mt-16 sm:mt-4 block relative w-full  lg:px-12">
             <img
               className="relative top-0 w-full z-10 "
               src={anonymous}
               alt="anon"
             />
             <img
-              className="absolute top-[85px] left-1 z-0 sm:w-[120px] sm:top-[150px] sm:left-4"
+              className="absolute top-[85px] left-1 z-0 sm:w-[120px] sm:top-[150px] sm:left-4 lg:top-[110px]"
               src={logo}
               alt="logo"
             />
             <img
-              className="absolute top-[200px] right-4 z-20 sm:w-[80px] sm:top-[250px]"
+              className="absolute top-[200px] right-4 z-20 sm:w-[80px] sm:top-[250px] lg:top-[200px] lg:right-[80px]"
               src={dots}
               alt="dots"
             />
@@ -60,7 +60,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="hidden sm:block relative z-20 text-2xl text-white mt-24 mx-auto p-8 border border-grey w-fit">
+      <div className="hidden sm:block relative z-20 text-2xl lg:text-xl text-white mt-24 mx-auto p-8 border border-grey w-fit">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
         <div className="absolute -top-5 left-5 bg-background w-[39px] h-[39px] z-10">
           <p className="absolute top-6 left-0 text-[64px] text-grey ">“</p>
@@ -68,7 +68,9 @@ const Home = () => {
         <div className="absolute -bottom-5 right-5 bg-background w-[39px] h-[39px] z-10">
           <p className="absolute top-6 left-0 text-[64px] text-grey">“</p>
         </div>
-        <p className="absolute p-4 border border-grey -right-[1px] -bottom-[66px]">Anonymous</p>
+        <p className="absolute p-4 border border-grey -right-[1px] -bottom-[66px] lg:-bottom-[62px] font-light">
+          Anonymous
+        </p>
       </div>
 
       {/* Projects */}
@@ -239,7 +241,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Background />
+      <div className="lg:hidden">
+        <Background />
+      </div>
     </div>
   )
 }
