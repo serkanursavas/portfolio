@@ -26,12 +26,14 @@ const Footer = () => {
             <div className="flex mt-3 gap-2">
               <a href="https://github.com/serkanursavas">
                 <img
+                  className="rounded-full  hover:opacity-50 transition-all duration-200"
                   src={github}
                   alt="github"
                 />
               </a>
               <a href="https://www.linkedin.com/in/serkanursavas/">
                 <img
+                  className="rounded-full  hover:opacity-50 transition-all duration-200"
                   src={linkedin}
                   alt="linkedin"
                 />

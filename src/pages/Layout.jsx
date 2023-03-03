@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import MainNavigation from '../components/MainNavigation'
 import Footer from '../components/Footer'
 import Background from '../components/UI/Background'
+import Media from '../components/UI/Media'
 
 const Layout = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,6 +17,7 @@ const Layout = () => {
 
   return (
     <div className="relative overflow-hidden">
+      <Media />
       <LayoutCard>
         <Header
           toggleMenu={toggleMenu}
