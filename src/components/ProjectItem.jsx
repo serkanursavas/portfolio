@@ -1,4 +1,4 @@
-import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import ButtonPrimary from '../components/UI/ButtonPrimary'
 import TypingEffect from './UI/TypingEffect'
 
@@ -19,7 +19,7 @@ const ProjectItem = props => {
           <ButtonPrimary
             link={props.link}
             name={props.status}
-            icon={faPlay}
+            icon={faChevronRight}
           />
         </div>
       </div>

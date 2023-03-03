@@ -29,7 +29,7 @@ const Layout = () => {
         {!isOpen && <Outlet />}
       </LayoutCard>
 
-      <Footer />
+      {!isOpen && <Footer />}
     </>
   )
 }
