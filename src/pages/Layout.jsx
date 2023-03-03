@@ -21,10 +21,12 @@ const Layout = () => {
           isOpen={isOpen}
         />
 
-        <MainNavigation
-          toggleMenu={toggleMenu}
-          isOpen={isOpen}
-        />
+        <div className="lg:hidden">
+          <MainNavigation
+            toggleMenu={toggleMenu}
+            isOpen={isOpen}
+          />
+        </div>
 
         {!isOpen && <Outlet />}
       </LayoutCard>

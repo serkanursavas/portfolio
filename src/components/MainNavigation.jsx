@@ -11,9 +11,10 @@ const MainNavigation = props => {
         id="mainNav"
         className={`${
           props.isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }  bg-background flex flex-col absolute w-full h-auto`}
+        }  bg-background flex flex-col absolute w-full h-auto lg:relative lg:flex
+          lg:visible lg:opacity-100`}
       >
-        <ul className="mt-16 text-4xl space-y-9 font-light text-grey">
+        <ul className="mt-16 text-4xl space-y-9 font-light text-grey lg:flex lg:space-y-0 lg:mt-0 lg:gap-8 lg:text-lg">
           <li>
             <NavLink
               to="/"
@@ -59,7 +60,7 @@ const MainNavigation = props => {
             </NavLink>
           </li>
         </ul>
-        <div className="mt-28 flex space-x-3 justify-center">
+        <div className="mt-28 flex space-x-3 justify-center lg:hidden">
           <a href="https://github.com/serkanursavas">
             <img
               src={github}

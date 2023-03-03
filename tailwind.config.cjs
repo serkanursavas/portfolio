@@ -8,6 +8,10 @@ module.exports = {
         grey: '#ABB2BF',
         background: '#282C33'
       }
+    },
+    screens: {
+      lg: '1200px',
+      sm: '640px'
     }
   },
   plugins: []
