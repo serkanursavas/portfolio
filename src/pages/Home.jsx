@@ -36,10 +36,11 @@ const Home = () => {
         <div>
           <div className="mt-16 sm:mt-4 block relative w-full  lg:px-12">
             <img
-              className="relative top-0 w-full z-10 "
+              className="relative top-0 w-full z-10"
               src={anonymous}
-              alt="anon"
+              alt="pp"
             />
+
             <img
               className="absolute top-[85px] left-1 z-0 sm:w-[120px] sm:top-[150px] sm:left-4 lg:top-[110px]"
               src={logo}

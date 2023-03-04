@@ -17,7 +17,7 @@ const Layout = () => {
 
   return (
     <div className="relative overflow-hidden">
-      <Media />
+      {!isOpen && <Media />}
       <LayoutCard>
         <Header
           toggleMenu={toggleMenu}

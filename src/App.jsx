@@ -1,5 +1,4 @@
-import { RouterProvider, createBrowserRouter, useLocation } from 'react-router-dom'
-import { useLayoutEffect } from 'react'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import Layout from './pages/Layout'
 import Home from './pages/Home'
