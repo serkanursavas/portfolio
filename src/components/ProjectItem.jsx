@@ -12,7 +12,7 @@ const ProjectItem = props => {
             <span key={index}>{tool}</span>
           ))}
         </div>
-        <div className="flex flex-col p-4 gap-4">
+        <div className="flex flex-col p-4 gap-4 justify-center">
           <p className="text-2xl text-white">{props.title}</p>
           <p className="font-light text-grey">{props.description}</p>
 

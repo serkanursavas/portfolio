@@ -13,7 +13,7 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Bachira Online Shopping',
+    title: 'Bachira Online Shop',
     thumbnail: bachira,
     tools: ['Html', 'Css', 'React'],
     description: 'Best place to buy everything',

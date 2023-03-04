@@ -8,7 +8,7 @@ const LayoutCard = props => {
   }, [location.pathname])
 
   return (
-    <div className="min-h-[100vh] sm:min-h-[80vh] px-5 pt-5 pb-9 sm:p-16 sm:pt-12 relative overflow-hidden">
+    <div className="min-h-[100vh] sm:min-h-[80vh] px-5 pt-5 pb-9 sm:p-16 sm:pt-12 relative overflow-hidden lg:max-w-[1200px] lg:mx-auto">
       {props.children}
     </div>
   )

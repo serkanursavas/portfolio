@@ -4,10 +4,11 @@ import dots2 from '../assets/about-dots2.png'
 import aboutPic from '../assets/about.png'
 import skills from '../store/about'
 import SkillsItems from '../components/SkillsItems'
+import AnimatedPage from '../components/UI/AnimatedPage'
 
 const About = () => {
   return (
-    <>
+    <AnimatedPage>
       <PageTitle
         title="about-me"
         subtitle="Who am i?"
@@ -101,7 +102,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </>
+    </AnimatedPage>
   )
 }
 
