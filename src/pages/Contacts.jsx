@@ -3,10 +3,11 @@ import discordLogo from '../assets/discord.png'
 import mailLogo from '../assets/mail.png'
 import bitcoinLogo from '../assets/bitcoin.png'
 import dots31 from '../assets/dots31.png'
+import AnimatedPage from '../components/UI/AnimatedPage'
 
 const Contacts = () => {
   return (
-    <div className="">
+    <AnimatedPage>
       <PageTitle
         title="contacts"
         subtitle="Who am i?"
@@ -58,7 +59,7 @@ const Contacts = () => {
           </div>
         </div>
       </div>
-    </div>
+    </AnimatedPage>
   )
 }
 

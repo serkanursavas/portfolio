@@ -3,12 +3,14 @@ import ProjectItem from '../components/ProjectItem'
 import projects from '../store/projects'
 import PageTitle from '../components/PageTitle'
 import Background from '../components/UI/Background'
+import AnimatedPage from '../components/UI/AnimatedPage'
 
+import { useState } from 'react'
 const Works = () => {
   const activeProjects = projects.slice(0, 2)
 
   return (
-    <>
+    <AnimatedPage>
       <PageTitle
         title="projects"
         subtitle="List of my projects"
@@ -32,7 +34,7 @@ const Works = () => {
           ))}
         </div>
       </div>
-    </>
+    </AnimatedPage>
   )
 }
 
