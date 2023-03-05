@@ -13,9 +13,9 @@ const About = () => {
         title="about-me"
         subtitle="Who am i?"
       />
-      <div className="sm:grid sm:grid-cols-2 sm:gap-36 sm:mt-10">
-        <div className="sm:flex sm:flex-col sm:justify-center">
-          <div className="mt-16 sm:mt-0 flex gap-1 justify-between items-end ">
+      <div className="sm:grid sm:grid-cols-2 sm:gap-36 sm:mt-10 lg:mt-8">
+        <div className="sm:flex sm:flex-col sm:justify-center  ">
+          <div className="mt-16 sm:mt-0 flex gap-1 justify-between items-end">
             <p className="basis-3/5 sm:basis-auto leading-6 max-[330px]:text-xs text-grey font-light  text-sm sm:text-base sm:leading-7">
               Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana, Turkey. I can develop responsive
               websites from scratch and raise them into modern user-friendly web experiences.
@@ -45,15 +45,15 @@ const About = () => {
             technologies and frameworks.
           </p>
         </div>
-        <div className="relative">
-          <div className="hidden sm:block relative w-full">
+        <div className="relative ">
+          <div className="hidden sm:block relative w-full lg:flex lg:justify-center">
             <img
-              className="absolute right-32 top-72 max-w-[95px]"
+              className="absolute right-32 top-72 max-w-[95px] lg:left-20"
               src={dots1}
               alt="Dots"
             />
             <img
-              className="absolute -left-2 top-16 max-w-[90px]"
+              className="absolute -left-2 top-16 max-w-[90px] lg:left-12"
               src={dots2}
               alt="Dots"
             />
@@ -62,7 +62,7 @@ const About = () => {
               src={aboutPic}
               alt="About-Me"
             />
-            <div className="w-72 h-[1px] bg-primary absolute bottom-0 left-10  "></div>
+            <div className="w-72 h-[1px] bg-primary absolute bottom-0 left-10 lg:left-24 "></div>
           </div>
         </div>
       </div>
