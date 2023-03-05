@@ -5,16 +5,12 @@ import dots36 from '../../assets/dots36.png'
 const Background = () => {
   return (
     <div className="hidden sm:block">
-      <div className="absolute -right-9 lg:-right-4 top-[700px] lg:top-[600px] w-[90px] h-[90px] border border-grey"></div>
-      <img
-        className="max-[375px]:hidden w-[60px] lg:w-[110px] absolute -left-[30px] lg:-left-[55px] top-[1050px]"
-        src={dots28}
-        alt="dots28"
-      />
-      <div className="max-[375px]:hidden absolute -right-[90px] top-[1200px] lg:top-[1150px] lg:w-[140px] w-[130px] h-[130px] border border-grey"></div>
+      <div className="absolute -right-9 lg:-right-4 top-[700px] lg:top-[400px] w-[90px] h-[90px] border border-grey"></div>
+
+      <div className="max-[375px]:hidden absolute -right-[90px] top-[1200px] lg:top-[950px] lg:w-[140px] w-[130px] h-[130px] border border-grey"></div>
       <div className="max-[375px]:hidden absolute -left-[55px] lg:-left-[30px] top-[2320px] lg:top-[2170px] w-[90px] lg:h-[150px] h-[90px] border border-grey"></div>
       <img
-        className="max-[375px]:hidden absolute -right-2 bottom-[450px] lg:bottom-[650px] w-[60px] lg:w-[80px]"
+        className="max-[375px]:hidden absolute -right-2 bottom-[450px] lg:bottom-[750px] w-[60px] lg:w-[80px]"
         src={dots31}
         alt="dots31"
       />

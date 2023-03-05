@@ -13,14 +13,15 @@ const Contacts = () => {
         subtitle="Who am i?"
       />
 
-      <div className="absolute -right-9 top-28 w-[80px] h-[80px] border border-grey"></div>
-      <img
-        className="max-[375px]:hidden w-[45px] absolute right-0 sm:left-72 sm:top-96 sm:rotate-[90deg] sm:w-[90px] bottom-20"
-        src={dots31}
-        alt="dots31"
-      />
-      <div className="max-[375px]:hidden absolute -left-10 -bottom-2 sm:bottom-12 w-[80px] h-[80px] border border-grey"></div>
-
+      <div className="lg:hidden">
+        <div className="absolute -right-9 top-28 w-[80px] h-[80px] border border-grey"></div>
+        <img
+          className="max-[375px]:hidden w-[45px] absolute right-0 sm:left-72 sm:top-96 sm:rotate-[90deg] sm:w-[90px] bottom-20"
+          src={dots31}
+          alt="dots31"
+        />
+        <div className="max-[375px]:hidden absolute -left-10 -bottom-2 sm:bottom-12 w-[80px] h-[80px] border border-grey"></div>
+      </div>
       <div className="mt-16 text-grey font-light sm:flex sm:gap-36">
         <p className="basis-2/5">
           I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate to
