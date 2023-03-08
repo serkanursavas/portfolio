@@ -1,6 +1,6 @@
 import PageTitle from '../components/PageTitle'
-import dots1 from '../assets/about-dots1.png'
-import dots2 from '../assets/about-dots2.png'
+import dots1 from '../assets/dots36.svg'
+import dots2 from '../assets/dots.svg'
 import aboutPic from '../assets/about.png'
 import skills from '../store/about'
 import SkillsItems from '../components/SkillsItems'
@@ -48,7 +48,7 @@ const About = () => {
         <div className="relative ">
           <div className="hidden sm:block relative w-full lg:flex lg:justify-center">
             <img
-              className="absolute right-32 top-72 max-w-[95px] lg:left-20"
+              className="absolute right-32 top-72 max-w-[95px] lg:right-24"
               src={dots1}
               alt="Dots"
             />

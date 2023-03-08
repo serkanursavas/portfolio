@@ -1,7 +1,7 @@
 import PageTitle from '../components/PageTitle'
-import discordLogo from '../assets/discord.png'
-import mailLogo from '../assets/mail.png'
-import bitcoinLogo from '../assets/bitcoin.png'
+import discordLogo from '../assets/discord.svg'
+import mailLogo from '../assets/mail.svg'
+import bitcoinLogo from '../assets/bitcoin.svg'
 import dots31 from '../assets/dots31.png'
 import AnimatedPage from '../components/UI/AnimatedPage'
 
@@ -41,7 +41,7 @@ const Contacts = () => {
           </div>
           <div className="border border-grey p-4 space-y-2 w-fit">
             <h6 className="text-white font-normal">Message me here</h6>
-            <div className="flex space-x-2 max-[400px]:text-sm max-[350px]:text-[11px]">
+            <div className="flex space-x-2 max-[400px]:text-sm max-[350px]:text-[11px] items-center ">
               <img
                 className="object-contain"
                 src={discordLogo}
@@ -49,7 +49,7 @@ const Contacts = () => {
               />
               <p>Serkan#2792</p>
             </div>
-            <div className="flex space-x-2 max-[400px]:text-sm max-[350px]:text-[11px]">
+            <div className="flex space-x-2 max-[400px]:text-sm max-[350px]:text-[11px] items-center">
               <img
                 className="object-contain"
                 src={mailLogo}

@@ -8,7 +8,10 @@ const Header = props => {
     <header className="flex justify-between w-full">
       <Link to="">
         <div className="flex items-center space-x-2 lg:text-lg hover:opacity-70">
-          <img src={logo} />
+          <img
+            src={logo}
+            className="w-4"
+          />
           <span className="text-white">Serkan</span>
         </div>
       </Link>

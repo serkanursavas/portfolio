@@ -1,6 +1,4 @@
 import dots31 from '../../assets/dots31.png'
-import dots28 from '../../assets/dots28.png'
-import dots36 from '../../assets/dots36.png'
 
 const Background = () => {
   return (

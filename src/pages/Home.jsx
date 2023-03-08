@@ -1,11 +1,11 @@
-import anonymous from '../assets/anony.png'
-import dots from '../assets/dots.png'
-import logo from '../assets/logoPrimary.png'
+import anonymous from '../assets/anony.svg'
+import dots from '../assets/dots.svg'
+import logo from '../assets/logoPrimary.svg'
 import aboutPic from '../assets/about.png'
-import discordLogo from '../assets/discord.png'
-import mailLogo from '../assets/mail.png'
-import dots1 from '../assets/dots36.png'
-import dots2 from '../assets/dots.png'
+import discordLogo from '../assets/discord.svg'
+import mailLogo from '../assets/mail.svg'
+import dots1 from '../assets/dots36.svg'
+import dots2 from '../assets/dots.svg'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -44,7 +44,7 @@ const Home = () => {
               />
 
               <img
-                className="absolute top-[85px] left-1 z-0 sm:w-[120px] sm:top-[150px] sm:left-4 lg:top-[110px]"
+                className="absolute  top-[85px] left-1 z-0 sm:w-[120px] sm:top-[150px] sm:left-4 lg:top-[110px]"
                 src={logo}
                 alt="logo"
               />
@@ -193,12 +193,12 @@ const Home = () => {
                 alt=""
               />
               <img
-                className="absolute right-12 top-48 max-w-[52px] rotate-[90deg]"
+                className="absolute right-4 top-64 max-w-[104px]"
                 src={dots1}
                 alt="Dots"
               />
               <img
-                className="absolute -left-2 top-8 w-[60px]"
+                className="absolute -left-4 top-12  w-[84px]"
                 src={dots2}
                 alt="Dots"
               />
@@ -225,7 +225,7 @@ const Home = () => {
             </p>
             <div className="border border-grey p-4 space-y-2 w-fit mt-12">
               <h6 className="text-white font-normal">Message me here</h6>
-              <div className="flex space-x-2 max-[400px]:text-sm max-[350px]:text-[11px]">
+              <div className="flex items-center space-x-2 max-[400px]:text-sm max-[350px]:text-[11px]">
                 <img
                   className="object-contain"
                   src={discordLogo}
@@ -233,7 +233,7 @@ const Home = () => {
                 />
                 <p>Serkan#2792</p>
               </div>
-              <div className="flex space-x-2 max-[400px]:text-sm max-[350px]:text-[11px] min-w-[265px] h-fit">
+              <div className="flex items-center space-x-2 max-[400px]:text-sm max-[350px]:text-[11px] min-w-[265px] h-fit">
                 <img
                   className="object-contain"
                   src={mailLogo}

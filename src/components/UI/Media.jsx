@@ -1,5 +1,5 @@
-import github from '../../assets/github.png'
-import linkedin from '../../assets/linkedin.png'
+import github from '../../assets/github.svg'
+import linkedin from '../../assets/linkedin.svg'
 
 const Media = () => {
   return (
@@ -15,7 +15,7 @@ const Media = () => {
         </a>
         <a href="https://www.linkedin.com/in/serkanursavas/">
           <img
-            className="rounded-full hover:scale-110 transition-all duration-200"
+            className="rounded-full hover:scale-110 transition-all duration-200 max-w-[26px]"
             src={linkedin}
             alt="linkedin"
           />

@@ -1,19 +1,17 @@
 import ProjectItem from '../components/ProjectItem'
-
-import projects from '../store/projects'
 import PageTitle from '../components/PageTitle'
 import AnimatedPage from '../components/UI/AnimatedPage'
 
+import projects from '../store/projects'
+
 const Works = () => {
   const activeProjects = projects.slice(0, 2)
-
   return (
     <AnimatedPage>
       <PageTitle
         title="projects"
         subtitle="List of my projects"
       />
-
       <div className="mt-16 text-white mb-16">
         <h2 className="text-2xl">
           <span className="text-primary">#</span>complete-apps

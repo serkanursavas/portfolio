@@ -1,5 +1,5 @@
-import github from '../assets/github.png'
-import linkedin from '../assets/linkedin.png'
+import github from '../assets/github.svg'
+import linkedin from '../assets/linkedin.svg'
 import union from '../assets/union.png'
 import AnimatedPage from './UI/AnimatedPage'
 
@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="flex space-x-4">
                 <div className="flex space-x-2 items-center">
                   <img
-                    className="object-fit"
+                    className="object-fit w-4"
                     src={union}
                     alt="logo"
                   />
@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
             <div className="text-center">
               <p className="text-2xl">Media</p>
-              <div className="flex mt-3 gap-2">
+              <div className="flex mt-3 gap-2 items-center">
                 <a href="https://github.com/serkanursavas">
                   <img
                     className="rounded-full  hover:opacity-50 transition-all duration-200"
@@ -35,7 +35,7 @@ const Footer = () => {
                 </a>
                 <a href="https://www.linkedin.com/in/serkanursavas/">
                   <img
-                    className="rounded-full  hover:opacity-50 transition-all duration-200"
+                    className="max-w-[26px] rounded-full  hover:opacity-50 transition-all duration-200 "
                     src={linkedin}
                     alt="linkedin"
                   />
