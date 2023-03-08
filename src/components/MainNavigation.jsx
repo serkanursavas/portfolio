@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
-import linkedin from '../assets/linkedin.png'
-import github from '../assets/github.png'
+import linkedin from '../assets/linkedin.svg'
+import github from '../assets/github.svg'
 import './Header.css'
 
 const MainNavigation = props => {
@@ -60,15 +60,17 @@ const MainNavigation = props => {
             </NavLink>
           </li>
         </ul>
-        <div className="mt-28 flex space-x-3 justify-center lg:hidden">
+        <div className="mt-28 flex space-x-3 justify-center lg:hidden items-center">
           <a href="https://github.com/serkanursavas">
             <img
+              className="w-[62px] hover:opacity-50 transition-all duration-200"
               src={github}
               alt="github"
             />
           </a>
           <a href="https://www.linkedin.com/in/serkanursavas/">
             <img
+              className="w-[52px] hover:opacity-50 transition-all duration-200"
               src={linkedin}
               alt="linkedin"
             />
