@@ -1,6 +1,6 @@
 import github from '../assets/github.svg'
 import linkedin from '../assets/linkedin.svg'
-import union from '../assets/union.svg'
+import union from '../assets/union.png'
 import AnimatedPage from './UI/AnimatedPage'
 
 const Footer = () => {
