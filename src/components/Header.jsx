@@ -1,4 +1,4 @@
-import logo from '../assets/union.svg'
+import logo from '../assets/union.png'
 import './Header.css'
 import { Link } from 'react-router-dom'
 import MainNavigation from './MainNavigation'
