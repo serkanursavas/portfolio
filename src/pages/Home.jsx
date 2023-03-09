@@ -84,10 +84,10 @@ const Home = () => {
         <section className="hidden sm:block">
           <div className="mt-36 text-white flex items-center justify-between space-x-4">
             <div className="flex space-x-4 items-center">
-              <p className="font-medium text-[36px]">
+              <h2 className="font-medium text-[36px]">
                 <span className="text-primary">#</span>
                 projects
-              </p>
+              </h2>
               <div className=" w-[510px] h-[1px] bg-primary"></div>
             </div>
             <Link to="/works">
@@ -123,10 +123,10 @@ const Home = () => {
         <section className="hidden sm:block">
           <div className="mt-36 text-white flex items-center justify-between space-x-4">
             <div className="flex space-x-4 items-center">
-              <p className="font-medium text-[36px]">
+              <h2 className="font-medium text-[36px]">
                 <span className="text-primary">#</span>
                 skills
-              </p>
+              </h2>
               <div className=" w-[240px] h-[1px] bg-primary"></div>
             </div>
           </div>
@@ -172,10 +172,10 @@ const Home = () => {
             <div className="basis-2/3 mt-6 space-y-6">
               <div className="mt-16 text-white flex items-center justify-between space-x-4">
                 <div className="flex space-x-4 items-center">
-                  <p className="font-medium text-[36px]">
+                  <h2 className="font-medium text-[36px]">
                     <span className="text-primary">#</span>
                     about-me
-                  </p>
+                  </h2>
                   <div className=" w-[325px] h-[1px] bg-primary"></div>
                 </div>
               </div>
@@ -215,10 +215,10 @@ const Home = () => {
         <section className="hidden sm:block">
           <div className="mt-36 text-white flex items-center justify-between space-x-4">
             <div className="flex space-x-4 items-center">
-              <p className="font-medium text-[36px]">
+              <h2 className="font-medium text-[36px]">
                 <span className="text-primary">#</span>
                 contacts
-              </p>
+              </h2>
               <div className=" w-[125px] h-[1px] bg-primary"></div>
             </div>
           </div>

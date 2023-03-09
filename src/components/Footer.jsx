@@ -6,7 +6,7 @@ import AnimatedPage from './UI/AnimatedPage'
 const Footer = () => {
   return (
     <AnimatedPage>
-      <div className="hidden sm:block border-t-[1px] border-grey w-full z-20 relative bg-background">
+      <div className="hidden sm:block border-t-[1px] border-grey w-full z-20 relative bg-background text-sm">
         <div className="px-40 py-8 text-white">
           <div className="flex justify-between">
             <div>

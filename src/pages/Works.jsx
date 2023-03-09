@@ -16,7 +16,7 @@ const Works = () => {
         <h2 className="text-2xl">
           <span className="text-primary">#</span>complete-apps
         </h2>
-        <div className="mt-10 space-y-6 sm:grid sm:grid-cols-2 sm:space-y-0 sm:gap-10 lg:hidden">
+        <section className="mt-10 space-y-6 sm:grid sm:grid-cols-2 sm:space-y-0 sm:gap-10 lg:hidden">
           {activeProjects.map(project => (
             <ProjectItem
               key={project.id}
@@ -28,8 +28,8 @@ const Works = () => {
               status={project.status}
             />
           ))}
-        </div>
-        <div className="hidden mt-10 space-y-6 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-10 ">
+        </section>
+        <section className="hidden mt-10 space-y-6 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-10 ">
           {projects.map(project => (
             <ProjectItem
               key={project.id}
@@ -41,7 +41,7 @@ const Works = () => {
               status={project.status}
             />
           ))}
-        </div>
+        </section>
       </div>
     </AnimatedPage>
   )
