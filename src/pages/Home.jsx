@@ -1,4 +1,8 @@
-import anonymous from '../assets/anony.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
+
+import anonymous from '../assets/anony.png'
 import dots from '../assets/dots.svg'
 import logo from '../assets/logoPrimary.svg'
 import aboutPic from '../assets/about.png'
@@ -7,26 +11,26 @@ import mailLogo from '../assets/mail.svg'
 import dots1 from '../assets/dots36.svg'
 import dots2 from '../assets/dots.svg'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
 import ProjectItem from '../components/ProjectItem'
-import projects from '../store/projects'
-import skills from '../store/about'
 import SkillsItems from '../components/SkillsItems'
 import ButtonPrimary from '../components/UI/ButtonPrimary'
 import Background from '../components/UI/Background'
 import AnimatedPage from '../components/UI/AnimatedPage'
 
+import projects from '../store/projects'
+import skills from '../store/about'
+
 const Home = () => {
   return (
     <AnimatedPage>
-      <div className="w-full">
+      <main className="w-full">
         <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-8 sm:items-center lg:gap-24">
           <div className="mt-8 text-white text-[36px] space-y-6 font-medium">
             Serkan is a <span className="text-primary">web designer</span> and
             <span className="text-primary"> front-end developer</span>
-            <p className=" text-grey text-lg">He crafts responsive websites where technologies meet creativity</p>
+            <p className=" text-grey text-base font-normal">
+              He crafts responsive websites where technologies meet creativity
+            </p>
             <div className="hidden sm:block">
               <ButtonPrimary
                 name="Contact me!!"
@@ -55,8 +59,8 @@ const Home = () => {
               />
             </div>
             <div className="p-3 border border-grey flex space-x-3 items-center">
-              <div className=" w-4 h-4 bg-primary my-3"></div>
-              <p className=" text-lg text-grey">
+              <div className=" w-4 h-4 bg-primary"></div>
+              <p className=" text-base text-grey">
                 Currently working on <span className="text-white font-medium">Portfolio</span>
               </p>
             </div>
@@ -77,7 +81,7 @@ const Home = () => {
         </div>
 
         {/* Projects */}
-        <div className="hidden sm:block">
+        <section className="hidden sm:block">
           <div className="mt-36 text-white flex items-center justify-between space-x-4">
             <div className="flex space-x-4 items-center">
               <p className="font-medium text-[36px]">
@@ -113,10 +117,10 @@ const Home = () => {
               />
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Skilss */}
-        <div className="hidden sm:block">
+        <section className="hidden sm:block">
           <div className="mt-36 text-white flex items-center justify-between space-x-4">
             <div className="flex space-x-4 items-center">
               <p className="font-medium text-[36px]">
@@ -150,7 +154,7 @@ const Home = () => {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="w-[170px] text-white text-lg"
+                  className="w-[170px] text-white text-base"
                 >
                   <SkillsItems
                     title={skill.title}
@@ -160,11 +164,11 @@ const Home = () => {
               ))}
             </div>
           </div>
-        </div>
+        </section>
 
         {/* About */}
-        <div className="hidden sm:block mt-20">
-          <div className="flex gap-32 max-[1000px]:gap-2 max-[950px]:flex-col">
+        <section className="hidden sm:block mt-20">
+          <div className="flex gap-56 max-[1000px]:gap-2 max-[950px]:flex-col">
             <div className="basis-2/3 mt-6 space-y-6">
               <div className="mt-16 text-white flex items-center justify-between space-x-4">
                 <div className="flex space-x-4 items-center">
@@ -175,7 +179,7 @@ const Home = () => {
                   <div className=" w-[325px] h-[1px] bg-primary"></div>
                 </div>
               </div>
-              <p className="mt-6 text-grey font-light text-lg leading-8">
+              <p className="mt-6 text-grey text-base ">
                 Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana, Turkey. I can develop
                 responsive websites from scratch and raise them into modern user-friendly web experiences.
               </p>
@@ -205,10 +209,10 @@ const Home = () => {
               <div className="w-64 h-[1px] bg-primary absolute bottom-0 left-8"></div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Contacts */}
-        <div className="hidden sm:block">
+        <section className="hidden sm:block">
           <div className="mt-36 text-white flex items-center justify-between space-x-4">
             <div className="flex space-x-4 items-center">
               <p className="font-medium text-[36px]">
@@ -219,7 +223,7 @@ const Home = () => {
             </div>
           </div>
           <div className="flex text-grey gap-24 mt-6">
-            <p className="text-lg w-[500px] ">
+            <p className="text-base w-[500px] ">
               I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate
               to contact me
             </p>
@@ -243,11 +247,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <div className="lg:hidden">
           <Background />
         </div>
-      </div>
+      </main>
     </AnimatedPage>
   )
 }
