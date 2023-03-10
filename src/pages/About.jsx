@@ -13,10 +13,10 @@ const About = () => {
         title="about-me"
         subtitle="Who am i?"
       />
-      <div className="sm:grid sm:grid-cols-2 sm:gap-36 sm:mt-10 lg:mt-8">
+      <section className="sm:grid sm:grid-cols-2 sm:gap-36 sm:mt-10 lg:mt-8">
         <div className="sm:flex sm:flex-col sm:justify-center  ">
           <div className="mt-16 sm:mt-0 flex gap-1 justify-between items-end">
-            <p className="basis-3/5 sm:basis-auto leading-6 max-[330px]:text-xs text-grey font-light  text-sm sm:text-base sm:leading-7">
+            <p className="basis-3/5 sm:basis-auto leading-6 max-[330px]:text-xs text-grey sm:text-base sm:leading-7">
               Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana, Turkey. I can develop responsive
               websites from scratch and raise them into modern user-friendly web experiences.
             </p>
@@ -39,7 +39,7 @@ const About = () => {
               <div className="w-32 h-[1px] bg-primary absolute bottom-0 left-4"></div>
             </div>
           </div>
-          <p className="mt-4  text-grey font-light text-sm max-[330px]:text-xs sm:text-base sm:leading-7">
+          <p className="mt-4  text-grey text-sm max-[330px]:text-xs sm:text-base sm:leading-7">
             Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been
             helping various clients to establish their presence online. I always strive to learn about the newest
             technologies and frameworks.
@@ -65,9 +65,9 @@ const About = () => {
             <div className="w-72 h-[1px] bg-primary absolute bottom-0 left-10 lg:left-24 "></div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="mt-16 text-white">
+      <section className="mt-16 text-white">
         <h2 className="text-2xl">
           <span className="text-primary">#</span>skills
         </h2>
@@ -80,8 +80,9 @@ const About = () => {
             />
           ))}
         </div>
-      </div>
-      <div className="mt-16 text-white ">
+      </section>
+
+      <section className="mt-16 text-white ">
         <h2 className="text-2xl">
           <span className="text-primary">#</span>my-fun-facts
         </h2>
@@ -101,7 +102,7 @@ const About = () => {
             <p>I am still in university.</p>
           </div>
         </div>
-      </div>
+      </section>
     </AnimatedPage>
   )
 }

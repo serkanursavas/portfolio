@@ -22,7 +22,7 @@ const Contacts = () => {
         />
         <div className="max-[375px]:hidden absolute -left-10 -bottom-2 sm:bottom-12 w-[80px] h-[80px] border border-grey"></div>
       </div>
-      <div className="mt-16 text-grey font-light sm:flex sm:gap-36">
+      <div className="mt-16 text-grey sm:flex sm:gap-36">
         <p className="basis-2/5">
           I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate to
           contact me
