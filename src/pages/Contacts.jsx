@@ -5,7 +5,11 @@ import bitcoinLogo from '../assets/bitcoin.svg'
 import dots31 from '../assets/dots31.png'
 import AnimatedPage from '../components/UI/AnimatedPage'
 
+import { useEffect } from 'react'
 const Contacts = () => {
+  useEffect(() => {
+    document.title = 'Contacts'
+  }, [])
   return (
     <AnimatedPage>
       <PageTitle
