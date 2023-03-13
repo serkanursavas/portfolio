@@ -4,7 +4,13 @@ import AnimatedPage from '../components/UI/AnimatedPage'
 
 import projects from '../store/projects'
 
+import { useEffect } from 'react'
+
 const Works = () => {
+  useEffect(() => {
+    document.title = 'Projects'
+  }, [])
+
   const activeProjects = projects.slice(0, 2)
   return (
     <AnimatedPage>

@@ -6,7 +6,11 @@ import skills from '../store/about'
 import SkillsItems from '../components/SkillsItems'
 import AnimatedPage from '../components/UI/AnimatedPage'
 
+import { useEffect } from 'react'
 const About = () => {
+  useEffect(() => {
+    document.title = 'About'
+  }, [])
   return (
     <AnimatedPage>
       <PageTitle

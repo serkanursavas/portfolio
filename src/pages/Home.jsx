@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 import anonymous from '../assets/anony.png'
 import dots from '../assets/dots.svg'
@@ -21,6 +22,10 @@ import projects from '../store/projects'
 import skills from '../store/about'
 
 const Home = () => {
+  useEffect(() => {
+    document.title = 'Serkan Ursavaş'
+  }, [])
+
   return (
     <AnimatedPage>
       <main className="w-full">
