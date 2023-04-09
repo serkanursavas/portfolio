@@ -66,7 +66,7 @@ const Home = () => {
             <div className="p-3 border border-grey flex space-x-3 items-center">
               <div className=" w-4 h-4 bg-primary"></div>
               <p className=" text-base text-grey">
-                Currently working on <span className="text-white font-medium">Portfolio</span>
+                Currently working on <span className="text-white font-medium">Your Chat</span>
               </p>
             </div>
           </div>
@@ -110,7 +110,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="mt-12 w-full sm:grid grid-cols-3 gap-8">
-            {projects.map(project => (
+            {projects.slice(0, 3).map(project => (
               <ProjectItem
                 key={project.id}
                 title={project.title}

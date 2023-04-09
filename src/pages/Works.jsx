@@ -11,7 +11,7 @@ const Works = () => {
     document.title = 'Projects'
   }, [])
 
-  const activeProjects = projects.slice(0, 2)
+  const activeProjects = projects
   return (
     <AnimatedPage>
       <PageTitle
