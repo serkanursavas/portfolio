@@ -1,12 +1,25 @@
 import portfolioss from '../assets/portfolioss.png'
 import bachira from '../assets/bachira.png'
+import yourChat from '../assets/your-chat.png'
+
+import reactSVG from '../assets/react.svg'
+import tailwindSVG from '../assets/tailwind.svg'
+import antdesignSVG from '../assets/antdesign.svg'
+import firebaseSVG from '../assets/firebase.svg'
+
+const tool = [
+  { img: reactSVG, name: 'React' },
+  { img: tailwindSVG, name: 'Tailwindcss' },
+  { img: antdesignSVG, name: 'Ant Design' },
+  { img: firebaseSVG, name: 'Firebase' }
+]
 
 const projects = [
   {
     id: 1,
     title: 'Portfolio',
     thumbnail: portfolioss,
-    tools: ['Html', 'Css', 'React'],
+    tools: [tool[0], tool[1]],
     description: "You're using it",
     link: 'https://serkanursavas.info/',
     status: 'Live'
@@ -15,19 +28,19 @@ const projects = [
     id: 2,
     title: 'Bachira Online Shop',
     thumbnail: bachira,
-    tools: ['Html', 'Css', 'React'],
+    tools: [tool[0], tool[1]],
     description: 'Best place to buy everything',
     link: 'https://github.com/serkanursavas?tab=repositories',
     status: 'Github'
   },
   {
     id: 3,
-    title: 'Coming Soon',
-    thumbnail: null,
-    tools: ['Null'],
-    description: '',
-    link: '',
-    status: 'null'
+    title: 'Your Chat',
+    thumbnail: yourChat,
+    tools: [tool[0], tool[1], tool[2], tool[3]],
+    description: 'Real-Time chat application',
+    link: 'https://github.com/serkanursavas/your-chat',
+    status: 'Github'
   }
 ]
 
