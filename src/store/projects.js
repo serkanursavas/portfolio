@@ -39,8 +39,8 @@ const projects = [
     thumbnail: yourChat,
     tools: [tool[0], tool[1], tool[2], tool[3]],
     description: 'Real-Time chat application',
-    link: 'https://github.com/serkanursavas/your-chat',
-    status: 'Github'
+    link: 'https://your-chat-pearl.vercel.app/',
+    status: 'Live'
   }
 ]
 

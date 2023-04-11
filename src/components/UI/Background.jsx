@@ -1,9 +1,24 @@
 import dots31 from '../../assets/dots31.png'
 
+import JSConfetti from 'js-confetti'
+
+const jsConfetti = new JSConfetti()
+
+const easterEgg = () => {
+  jsConfetti.addConfetti({
+    emojis: ['🇬🇧', '✈️', '🎧'],
+    confettiNumber: 20,
+    emojiSize: 70
+  })
+}
+
 const Background = () => {
   return (
     <div className="hidden sm:block">
-      <div className="absolute -right-9 lg:-right-4 top-[700px] lg:top-[400px] w-[90px] h-[90px] border border-grey"></div>
+      <div
+        onClick={easterEgg}
+        className="absolute -right-9 lg:-right-4 top-[700px] lg:top-[400px] w-[90px] h-[90px] border border-grey"
+      ></div>
 
       <div className="max-[375px]:hidden absolute -right-[90px] top-[1200px] lg:top-[950px] lg:w-[140px] w-[130px] h-[130px] border border-grey"></div>
       <div className="max-[375px]:hidden absolute -left-[55px] lg:-left-[30px] top-[2320px] lg:top-[2170px] w-[90px] lg:h-[150px] h-[90px] border border-grey"></div>
