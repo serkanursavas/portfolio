@@ -21,10 +21,30 @@ import AnimatedPage from '../components/UI/AnimatedPage'
 import projects from '../store/projects'
 import skills from '../store/about'
 
+import JSConfetti from 'js-confetti'
+
 const Home = () => {
   useEffect(() => {
     document.title = 'Serkan Ursavaş'
   }, [])
+
+  const jsConfetti = new JSConfetti()
+
+  const easterEgg = () => {
+    jsConfetti.addConfetti({
+      emojis: ['🌸', '🇰🇷'],
+      confettiNumber: 20,
+      emojiSize: 70
+    })
+  }
+
+  const easterEgg1 = () => {
+    jsConfetti.addConfetti({
+      emojis: ['🏋🏻', '💻'],
+      confettiNumber: 20,
+      emojiSize: 70
+    })
+  }
 
   return (
     <AnimatedPage>
@@ -56,6 +76,7 @@ const Home = () => {
                 className="absolute  top-[85px] left-1 z-0 sm:w-[120px] sm:top-[150px] sm:left-4 lg:top-[110px]"
                 src={logo}
                 alt="logo"
+                onClick={easterEgg}
               />
               <img
                 className="absolute top-[200px] right-4 z-20 sm:w-[80px] sm:top-[250px] lg:top-[200px] lg:right-[80px]"
@@ -80,7 +101,10 @@ const Home = () => {
           <div className="absolute -bottom-5 right-5 bg-background w-[39px] h-[39px] z-10">
             <p className="absolute top-6 left-0 text-[64px] text-grey">“</p>
           </div>
-          <p className="absolute p-4 border border-grey -right-[1px] -bottom-[66px] lg:-bottom-[62px] font-light">
+          <p
+            onClick={easterEgg1}
+            className="absolute p-4 border border-grey -right-[1px] -bottom-[66px] lg:-bottom-[62px] font-light"
+          >
             Anonymous
           </p>
         </div>
@@ -151,6 +175,7 @@ const Home = () => {
                 className="w-[120px] h-[120px] absolute bottom-0 left-5"
                 src={logo}
                 alt="logo"
+                onClick={easterEgg}
               />
               <div className="w-24 h-24 border border-grey absolute top-0 right-6"></div>
               <div className="w-16 h-16 border border-grey absolute bottom-6 right-0"></div>
