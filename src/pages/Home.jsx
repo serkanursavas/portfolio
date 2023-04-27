@@ -87,7 +87,7 @@ const Home = () => {
             <div className="p-3 border border-grey flex space-x-3 items-center">
               <div className=" w-4 h-4 bg-primary"></div>
               <p className=" text-base text-grey">
-                Currently working on <span className="text-white font-medium">Your Chat</span>
+                Currently working on <span className="text-white font-medium">learning Laravel</span>
               </p>
             </div>
           </div>
