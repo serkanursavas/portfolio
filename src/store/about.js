@@ -18,6 +18,7 @@ import cssSVG from '../assets/css.svg'
 import laravelSVG from '../assets/laravel.svg'
 import phpSVG from '../assets/php.svg'
 import nextSVG from '../assets/next.png'
+import mongodbSVG from '../assets/mongodb.svg'
 
 const skill = [
   { img: reactSVG, name: 'React' },
@@ -39,14 +40,15 @@ const skill = [
   { img: tailwindSVG, name: 'Tailwind' },
   { img: laravelSVG, name: 'Laravel' },
   { img: phpSVG, name: 'PHP' },
-  { img: nextSVG, name: 'NextJS' }
+  { img: nextSVG, name: 'NextJS' },
+  { img: mongodbSVG, name: 'MongoDB' }
 ]
 
 const skills = [
   { title: 'Languages', skills: [skill[1], skill[2], skill[3], skill[4], skill[18]] },
   { title: 'Other', skills: [skill[5], skill[6], skill[7], skill[16]] },
   { title: 'Frameworks', skills: [skill[0], skill[8], skill[17], skill[19]] },
-  { title: 'Databases', skills: [skill[9]] },
+  { title: 'Databases', skills: [skill[9], skill[20]] },
   {
     title: 'Tools',
     skills: [skill[10], skill[11], skill[12], skill[13], skill[14], skill[15]]

@@ -2,6 +2,7 @@ import portfolioss from '../assets/portfolioss.png'
 import bachira from '../assets/bachira.png'
 import yourChat from '../assets/your-chat.png'
 import surveymaster from '../assets/surveymaster.png'
+import blogApp from '../assets/blog-app.png'
 
 import reactSVG from '../assets/react.svg'
 import tailwindSVG from '../assets/tailwind.svg'
@@ -9,6 +10,8 @@ import antdesignSVG from '../assets/antdesign.svg'
 import firebaseSVG from '../assets/firebase.svg'
 import phpSVG from '../assets/php.svg'
 import laravelSVG from '../assets/laravel.svg'
+import nextSVG from '../assets/next.png'
+import mongodbSVG from '../assets/mongodb.svg'
 
 const tool = [
   { img: reactSVG, name: 'React' },
@@ -16,7 +19,9 @@ const tool = [
   { img: antdesignSVG, name: 'Ant Design' },
   { img: firebaseSVG, name: 'Firebase' },
   { img: phpSVG, name: 'PHP' },
-  { img: laravelSVG, name: 'Laravel' }
+  { img: laravelSVG, name: 'Laravel' },
+  { img: nextSVG, name: 'NextJS' },
+  { img: mongodbSVG, name: 'MongoDB' }
 ]
 
 const projects = [
@@ -54,6 +59,15 @@ const projects = [
     tools: [tool[4], tool[5], tool[0], tool[1]],
     description: 'Create surveys easily, analyze data effectively.',
     link: 'https://surveymaster.online/',
+    status: 'Live'
+  },
+  {
+    id: 5,
+    title: "Serkan' Blog",
+    thumbnail: blogApp,
+    tools: [tool[6], tool[7]],
+    description: 'I post about programming and web development.',
+    link: 'https://blog-app-seven-chi.vercel.app/',
     status: 'Live'
   }
 ]
