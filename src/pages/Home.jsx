@@ -114,9 +114,9 @@ const Home = () => {
 
         {/* Projects */}
         <section className="">
-          <div className="mt-36 text-white flex items-center justify-between space-x-4">
+          <div className="mt-12 sm:mt-36 text-white flex items-center justify-between space-x-4">
             <div className="flex space-x-4 items-center">
-              <h2 className="font-medium text-xl sm:text-[36px]">
+              <h2 className="font-medium text-[24px] sm:text-[36px]">
                 <span className="text-primary">#</span>
                 projects
               </h2>
@@ -136,7 +136,7 @@ const Home = () => {
               </div>
             </Link>
           </div>
-          <div className="mt-12 w-full flex flex-col sm:grid grid-cols-3 gap-8">
+          <div className="mt-6 sm:mt-12 w-full flex flex-col sm:grid grid-cols-3 gap-8">
             {projects.slice(0, 3).map(project => (
               <ProjectItem
                 key={project.id}
