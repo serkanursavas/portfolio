@@ -11,6 +11,7 @@ const About = () => {
   useEffect(() => {
     document.title = 'About'
   }, [])
+
   return (
     <AnimatedPage>
       <PageTitle
