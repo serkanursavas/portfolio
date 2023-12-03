@@ -21,8 +21,9 @@ const About = () => {
         <div className="sm:flex sm:flex-col sm:justify-center  ">
           <div className="mt-16 sm:mt-0 flex gap-1 justify-between items-end">
             <p className="basis-3/5 sm:basis-auto leading-6 max-[330px]:text-xs text-grey sm:text-base sm:leading-7">
-              Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana, Turkey. I can develop responsive
-              websites from scratch and raise them into modern user-friendly web experiences.
+              Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana,
+              Turkey. I can develop responsive websites from scratch and raise them into
+              modern user-friendly web experiences.
             </p>
             <div className="relative max-w-[170px] basis-2/5 sm:hidden">
               <img
@@ -44,9 +45,10 @@ const About = () => {
             </div>
           </div>
           <p className="mt-4  text-grey text-sm max-[330px]:text-xs sm:text-base sm:leading-7">
-            Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been
-            helping various clients to establish their presence online. I always strive to learn about the newest
-            technologies and frameworks.
+            Transforming my creativity and knowledge into a websites has been my passion
+            for over a year. I have been helping various clients to establish their
+            presence online. I always strive to learn about the newest technologies and
+            frameworks.
           </p>
         </div>
         <div className="relative ">
@@ -93,7 +95,8 @@ const About = () => {
         <div className="mt-6 text-grey space-y-4 text-sm font-light max-[330px]:text-xs sm:flex sm:space-y-0 sm:flex-wrap sm:gap-5">
           <div className="border border-grey p-2 sm:w-fit">
             <p>
-              I like to work more at <span className="text-white">night</span> than during the day.
+              I like to work more at <span className="text-white">night</span> than during
+              the day.
             </p>
           </div>
           <div className="border border-grey p-2">

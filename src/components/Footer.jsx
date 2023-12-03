@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="border-t-[1px] border-grey w-full z-20 relative bg-background text-sm">
         <div className="px-6 sm:px-40 py-8 text-white">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="border-b border-grey pb-2">
+            <div className="border-b border-grey sm:border-b-0 pb-2">
               <div className="flex space-x-4">
                 <div className="flex space-x-2 items-center">
                   <img
