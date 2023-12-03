@@ -50,7 +50,7 @@ const Home = () => {
     <AnimatedPage>
       <main className="w-full">
         <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-8 sm:items-center lg:gap-24">
-          <div className="mt-8 text-white text-xl sm:text-[36px] space-y-6 font-medium sm:leading-[48px]">
+          <div className="mt-8 text-white text-[24px] sm:text-[36px] space-y-6 font-medium sm:leading-[48px]">
             Serkan is a <span className="text-primary">web designer</span> and
             <span className="text-primary"> front-end developer</span>
             <p className=" text-grey text-sm sm:text-base font-normal">
@@ -65,7 +65,7 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <div className="mt-16 sm:mt-4 block relative h-80 overflow-hidden lg:px-12">
+            <div className="mt-10 sm:mt-4 block relative h-80 overflow-hidden lg:px-12">
               <div className="h-80 w-72 overflow-hidden mx-auto rounded-sm border border-primary">
                 <img
                   className="relative rounded-sm z-10 "
