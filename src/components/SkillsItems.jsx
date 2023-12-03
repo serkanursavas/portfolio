@@ -19,9 +19,7 @@ const SkillsItems = props => {
             <div
               key={index}
               className={`${
-                item.name === 'Javascript'
-                  ? 'cursor-pointer hover:text-primary hover:text-xl'
-                  : null
+                item.name === 'Javascript' ? 'cursor-pointer hover:text-primary ' : null
               } flex space-x-1 items-center`}
               onClick={item.name === 'Javascript' ? easterEgg : null}
             >
