@@ -3,7 +3,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 
-import anonymous from '../assets/anony.png'
+import anonymous from '../assets/anony.jpg'
 import dots from '../assets/dots.svg'
 import logo from '../assets/logoPrimary.svg'
 import aboutPic from '../assets/about.png'
@@ -65,31 +65,34 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <div className="mt-16 sm:mt-4 block relative w-full  lg:px-12">
+            <div className="mt-16 sm:mt-4 block relative h-80 overflow-hidden lg:px-12">
+              <div className="h-80 w-72 overflow-hidden mx-auto rounded-sm border border-primary">
+                <img
+                  className="relative rounded-sm z-10 "
+                  src={anonymous}
+                  alt="pp"
+                />
+              </div>
+              {/* 
               <img
-                className="relative top-0 w-full z-10"
-                src={anonymous}
-                alt="pp"
-              />
-
-              <img
-                className="absolute  top-[85px] left-1 z-0 sm:w-[120px] sm:top-[150px] sm:left-4 lg:top-[110px]"
+                className="absolute top-[85px] left-1 z-0 sm:w-[120px] sm:top-[150px] sm:left-4 lg:top-[110px] "
                 src={logo}
                 alt="logo"
                 onClick={easterEgg}
               />
               <img
-                className="absolute top-[200px] right-4 z-20 sm:w-[80px] sm:top-[250px] lg:top-[200px] lg:right-[80px]"
+                className="absolute top-[200px] right-4 z-20 sm:w-[80px] sm:top-[250px] lg:top-[200px] lg:right-[50px]"
                 src={dots}
                 alt="dots"
-              />
+              /> */}
             </div>
-            <div className="p-3 border border-grey flex space-x-3 items-center">
+            {/* <div className="p-3 border border-grey flex space-x-3 items-center">
               <div className=" w-4 h-4 bg-primary"></div>
               <p className=" text-base text-grey">
-                Currently working on <span className="text-white font-medium">learning Laravel</span>
+                Currently working on{' '}
+                <span className="text-white font-medium">learning Laravel</span>
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -210,8 +213,9 @@ const Home = () => {
                 </div>
               </div>
               <p className="mt-6 text-grey text-base ">
-                Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana, Turkey. I can develop
-                responsive websites from scratch and raise them into modern user-friendly web experiences.
+                Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana,
+                Turkey. I can develop responsive websites from scratch and raise them into
+                modern user-friendly web experiences.
               </p>
 
               <ButtonPrimary
@@ -254,8 +258,8 @@ const Home = () => {
           </div>
           <div className="flex text-grey gap-24 mt-6">
             <p className="text-base w-[500px] ">
-              I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate
-              to contact me
+              I'm interested in freelance opportunities. However, if you have other
+              request or question, don't hesitate to contact me
             </p>
             <div className="border border-grey p-4 space-y-2 w-fit mt-12">
               <h6 className="text-white font-normal">Message me here</h6>
