@@ -50,10 +50,10 @@ const Home = () => {
     <AnimatedPage>
       <main className="w-full">
         <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-8 sm:items-center lg:gap-24">
-          <div className="mt-8 text-white text-[36px] space-y-6 font-medium">
+          <div className="mt-8 text-white text-xl sm:text-[36px] space-y-6 font-medium">
             Serkan is a <span className="text-primary">web designer</span> and
             <span className="text-primary"> front-end developer</span>
-            <p className=" text-grey text-base font-normal">
+            <p className=" text-grey text-sm sm:text-base font-normal">
               He crafts responsive websites where technologies meet creativity
             </p>
             <div className="hidden sm:block">
@@ -86,13 +86,13 @@ const Home = () => {
                 alt="dots"
               /> */}
             </div>
-            {/* <div className="p-3 border border-grey flex space-x-3 items-center">
+            <div className="p-2 border border-grey flex space-x-3 items-center mt-12 sm:hidden">
               <div className=" w-4 h-4 bg-primary"></div>
-              <p className=" text-base text-grey">
+              <p className=" text-xs sm:text-base text-grey">
                 Currently working on{' '}
-                <span className="text-white font-medium">learning Laravel</span>
+                <span className="text-white font-medium">React-Native</span>
               </p>
-            </div> */}
+            </div>
           </div>
         </div>
 
@@ -113,14 +113,14 @@ const Home = () => {
         </div>
 
         {/* Projects */}
-        <section className="hidden sm:block">
+        <section className="">
           <div className="mt-36 text-white flex items-center justify-between space-x-4">
             <div className="flex space-x-4 items-center">
-              <h2 className="font-medium text-[36px]">
+              <h2 className="font-medium text-xl sm:text-[36px]">
                 <span className="text-primary">#</span>
                 projects
               </h2>
-              <div className=" w-[510px] h-[1px] bg-primary"></div>
+              <div className="sm:w-[510px] h-[1px] bg-primary"></div>
             </div>
             <Link to="/works">
               <div className="flex">
@@ -136,7 +136,7 @@ const Home = () => {
               </div>
             </Link>
           </div>
-          <div className="mt-12 w-full sm:grid grid-cols-3 gap-8">
+          <div className="mt-12 w-full flex flex-col sm:grid grid-cols-3 gap-8">
             {projects.slice(0, 3).map(project => (
               <ProjectItem
                 key={project.id}
@@ -162,8 +162,8 @@ const Home = () => {
               <div className=" w-[240px] h-[1px] bg-primary"></div>
             </div>
           </div>
-          <div className="mt-3 ml-8 flex justify-between">
-            <div className="relative w-[350px] h-[280px]">
+          <div className="mt-3 ml-8 flex justify-between ">
+            <div className="relative w-[350px] h-[280px] hidden lg:block ">
               <img
                 className="w-[63px] h-[63px] absolute top-6"
                 src={dots}
@@ -183,7 +183,7 @@ const Home = () => {
               <div className="w-24 h-24 border border-grey absolute top-0 right-6"></div>
               <div className="w-16 h-16 border border-grey absolute bottom-6 right-0"></div>
             </div>
-            <div className="h-[320px] max-[1020px]:h-[400px] flex flex-end flex-wrap-reverse flex-col gap-5 mt-8">
+            <div className="h-[400px] flex flex-end flex-wrap lg:flex-wrap-reverse flex-col gap-5 mt-8 ">
               {skills.map((skill, index) => (
                 <div
                   key={index}
@@ -240,7 +240,7 @@ const Home = () => {
                 src={dots2}
                 alt="Dots"
               />
-              <div className="w-64 h-[1px] bg-primary absolute bottom-0 left-8"></div>
+              <div className="w-64 h-[1px] bg-primary absolute bottom-0 left-8 max-[950px]:hidden"></div>
             </div>
           </div>
         </section>
