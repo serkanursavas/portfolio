@@ -2,14 +2,22 @@ import ProjectItem from '../components/ProjectItem'
 import PageTitle from '../components/PageTitle'
 import AnimatedPage from '../components/UI/AnimatedPage'
 
-import projects from '../store/projects'
+// import projects from '../store/projects'
 
-import { useEffect } from 'react'
+import { useContext, useEffect } from 'react'
+import { ProjectsContext } from '../store/projects-context'
 
 const Works = () => {
+  const { projects } = useContext(ProjectsContext)
+  console.log(projects)
+
   useEffect(() => {
     document.title = 'Projects'
   }, [])
+
+  if (projects.length === 0) {
+    return <div>loading...</div>
+  }
 
   const activeProjects = projects
   return (
@@ -25,10 +33,10 @@ const Works = () => {
         <section className="mt-10 space-y-6 sm:grid sm:grid-cols-2 sm:space-y-0 sm:gap-10 lg:hidden">
           {activeProjects.map(project => (
             <ProjectItem
-              key={project.id}
+              key={project._id}
               title={project.title}
-              thumbnail={project.thumbnail}
-              description={project.description}
+              thumbnail={project.img}
+              description={project.desc}
               tools={project.tools}
               link={project.link}
               status={project.status}
@@ -40,8 +48,8 @@ const Works = () => {
             <ProjectItem
               key={project.id}
               title={project.title}
-              thumbnail={project.thumbnail}
-              description={project.description}
+              thumbnail={project.img}
+              description={project.desc}
               tools={project.tools}
               link={project.link}
               status={project.status}
