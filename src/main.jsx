@@ -5,9 +5,9 @@ import './index.css'
 import ProjectsContextProvider from './store/projects-context'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <>
     <ProjectsContextProvider>
       <App />
     </ProjectsContextProvider>
-  </React.StrictMode>
+  </>
 )

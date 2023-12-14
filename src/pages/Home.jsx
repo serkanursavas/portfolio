@@ -28,8 +28,6 @@ const Home = () => {
     document.title = 'Serkan Ursavaş'
   }, [])
 
-  console.log(projects)
-
   const jsConfetti = new JSConfetti()
 
   const easterEgg = () => {

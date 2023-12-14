@@ -9,7 +9,6 @@ import { ProjectsContext } from '../store/projects-context'
 
 const Works = () => {
   const { projects } = useContext(ProjectsContext)
-  console.log(projects)
 
   useEffect(() => {
     document.title = 'Projects'
@@ -43,7 +42,7 @@ const Works = () => {
             />
           ))}
         </section>
-        <section className="hidden mt-10 space-y-6 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-10 ">
+        {/* <section className="hidden mt-10 space-y-6 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-10 ">
           {projects.map(project => (
             <ProjectItem
               key={project.id}
@@ -55,7 +54,7 @@ const Works = () => {
               status={project.status}
             />
           ))}
-        </section>
+        </section> */}
       </div>
     </AnimatedPage>
   )

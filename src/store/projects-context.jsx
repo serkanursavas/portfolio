@@ -16,6 +16,7 @@ function ProjectsContextProvider({ children }) {
         }
       })
       const data = await response.json()
+
       setProjects(data.projects)
     }
     getProjects()
