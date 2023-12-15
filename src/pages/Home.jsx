@@ -18,13 +18,13 @@ import ButtonPrimary from '../components/UI/ButtonPrimary'
 import Background from '../components/UI/Background'
 import AnimatedPage from '../components/UI/AnimatedPage'
 
-import skills from '../store/about'
-
 import JSConfetti from 'js-confetti'
 import { ProjectsContext } from '../store/projects-context'
+import { SkillsContext } from '../store/skills-context'
 
 const Home = () => {
   const { projects } = useContext(ProjectsContext)
+  const { skills, categories } = useContext(SkillsContext)
 
   useEffect(() => {
     document.title = 'Serkan Ursavaş'
@@ -196,14 +196,16 @@ const Home = () => {
               <div className="w-16 h-16 border border-grey absolute bottom-6 right-0"></div>
             </div>
             <div className="h-[400px] flex flex-end flex-wrap lg:flex-wrap-reverse flex-col gap-5 mt-8 ">
-              {skills.map((skill, index) => (
+              {categories.map((item, index) => (
                 <div
                   key={index}
                   className="w-[170px] text-white text-base"
                 >
                   <SkillsItems
-                    title={skill.title}
-                    skill={skill.skills}
+                    title={item}
+                    skill={skills
+                      .filter(skill => skill.category === item)
+                      .sort((a, b) => a.skill.localeCompare(b.skill))}
                   />
                 </div>
               ))}

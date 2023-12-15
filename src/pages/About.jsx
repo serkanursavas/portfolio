@@ -5,9 +5,12 @@ import aboutPic from '../assets/about.png'
 import skills from '../store/about'
 import SkillsItems from '../components/SkillsItems'
 import AnimatedPage from '../components/UI/AnimatedPage'
+import { useContext, useEffect } from 'react'
+import { SkillsContext } from '../store/skills-context'
 
-import { useEffect } from 'react'
 const About = () => {
+  const { skills, categories } = useContext(SkillsContext)
+
   useEffect(() => {
     document.title = 'About'
   }, [])
@@ -79,11 +82,13 @@ const About = () => {
           <span className="text-primary">#</span>skills
         </h2>
         <div className="mt-6 grid grid-cols-2 gap-4 text-sm font-light max-[330px]:text-xs sm:grid-cols-5">
-          {skills.map((item, index) => (
+          {categories.map((item, index) => (
             <SkillsItems
               key={index}
-              title={item.title}
-              skill={item.skills}
+              title={item}
+              skill={skills
+                .filter(skill => skill.category === item)
+                .sort((a, b) => a.skill.localeCompare(b.skill))}
             />
           ))}
         </div>

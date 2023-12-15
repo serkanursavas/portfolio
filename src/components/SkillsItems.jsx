@@ -12,22 +12,24 @@ const SkillsItems = props => {
   }
   return (
     <div className="border border-grey h-fit">
-      <h6 className="p-2 border-b border-grey font-medium">{props.title}</h6>
+      <h6 className="p-2 border-b border-grey font-medium">
+        {props.title.toUpperCase()}
+      </h6>
       <div className="p-2 text-grey font-light flex gap-2 flex-wrap ">
         {props.skill.map((item, index) => {
           return (
             <div
               key={index}
               className={`${
-                item.name === 'Javascript' ? 'cursor-pointer hover:text-primary ' : null
+                item.skill === 'Javascript' ? 'cursor-pointer hover:text-primary ' : null
               } flex space-x-1 items-center`}
-              onClick={item.name === 'Javascript' ? easterEgg : null}
+              onClick={item.skill === 'Javascript' ? easterEgg : null}
             >
               <img
-                src={item.img}
+                src={item.icon}
                 className="w-[16px] h-[16px]"
               />
-              <span className="select-none">{item.name}</span>
+              <span className="select-none">{item.skill}</span>
             </div>
           )
         })}
