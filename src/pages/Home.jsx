@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 
 import anonymous from '../assets/anony.jpg'
 import dots from '../assets/dots.svg'
@@ -18,14 +18,26 @@ import ButtonPrimary from '../components/UI/ButtonPrimary'
 import Background from '../components/UI/Background'
 import AnimatedPage from '../components/UI/AnimatedPage'
 
-import projects from '../store/projects'
 import skills from '../store/about'
 
 import JSConfetti from 'js-confetti'
+import { ProjectsContext } from '../store/projects-context'
 
 const Home = () => {
+  const { projects } = useContext(ProjectsContext)
+
   useEffect(() => {
     document.title = 'Serkan Ursavaş'
+
+    async function visitCounterHandler() {
+      const response = await fetch('http://localhost:3000/api/counter', {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+    }
+
+    visitCounterHandler()
   }, [])
 
   const jsConfetti = new JSConfetti()
@@ -139,10 +151,10 @@ const Home = () => {
           <div className="mt-6 sm:mt-12 w-full flex flex-col sm:grid grid-cols-3 gap-8">
             {projects.slice(0, 3).map(project => (
               <ProjectItem
-                key={project.id}
+                key={project._id}
                 title={project.title}
-                thumbnail={project.thumbnail}
-                description={project.description}
+                thumbnail={project.img}
+                description={project.desc}
                 tools={project.tools}
                 link={project.link}
                 status={project.status}
