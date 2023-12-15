@@ -73,7 +73,6 @@ const Home = () => {
                 name="Contact me!!"
                 link="/contacts"
                 icon=""
-                contactBtn
               />
             </div>
           </div>

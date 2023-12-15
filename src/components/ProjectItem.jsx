@@ -29,11 +29,12 @@ const ProjectItem = props => {
           <p className="text-2xl text-white">{props.title}</p>
           <p className="font-light text-grey">{props.description}</p>
 
-          <div className=" justify-self-start">
+          <div className="justify-self-start">
             <ButtonPrimary
               link={props.link}
               name={props.status}
               icon={faChevronRight}
+              projectBtn
             />
           </div>
         </div>

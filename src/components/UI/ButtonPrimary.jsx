@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ButtonPrimary = props => {
   function viewProjectsHandler() {
-    if (!props.contactBtn) {
+    if (props.projectBtn) {
       fetch('http://localhost:3000/api/projectviews', {
         headers: {
           'Content-Type': 'application/json'
