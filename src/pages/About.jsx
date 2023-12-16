@@ -2,7 +2,7 @@ import PageTitle from '../components/PageTitle'
 import dots1 from '../assets/dots36.svg'
 import dots2 from '../assets/dots.svg'
 import aboutPic from '../assets/about.png'
-import skills from '../store/about'
+import LoadingSpinner from '../components/UI/LoadingSpinner/LoadingSpinner'
 import SkillsItems from '../components/SkillsItems'
 import AnimatedPage from '../components/UI/AnimatedPage'
 import { useContext, useEffect } from 'react'
@@ -81,17 +81,24 @@ const About = () => {
         <h2 className="text-2xl">
           <span className="text-primary">#</span>skills
         </h2>
-        <div className="mt-6 grid grid-cols-2 gap-4 text-sm font-light max-[330px]:text-xs sm:grid-cols-5">
-          {categories.map((item, index) => (
-            <SkillsItems
-              key={index}
-              title={item}
-              skill={skills
-                .filter(skill => skill.category === item)
-                .sort((a, b) => a.skill.localeCompare(b.skill))}
-            />
-          ))}
-        </div>
+        {categories.length === 0 && (
+          <div className="w-full ">
+            <LoadingSpinner height="h-[210px]" />
+          </div>
+        )}
+        {categories && (
+          <div className="mt-6  grid grid-cols-2 gap-4 text-sm font-light max-[330px]:text-xs sm:grid-cols-5">
+            {categories.map((item, index) => (
+              <SkillsItems
+                key={index}
+                title={item}
+                skill={skills
+                  .filter(skill => skill.category === item)
+                  .sort((a, b) => a.skill.localeCompare(b.skill))}
+              />
+            ))}
+          </div>
+        )}
       </section>
 
       <section className="mt-16 text-white ">

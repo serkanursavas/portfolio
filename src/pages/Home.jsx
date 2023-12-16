@@ -21,6 +21,7 @@ import AnimatedPage from '../components/UI/AnimatedPage'
 import JSConfetti from 'js-confetti'
 import { ProjectsContext } from '../store/projects-context'
 import { SkillsContext } from '../store/skills-context'
+import LoadingSpinner from '../components/UI/LoadingSpinner/LoadingSpinner'
 
 const Home = () => {
   const { projects } = useContext(ProjectsContext)
@@ -148,19 +149,23 @@ const Home = () => {
               </div>
             </Link>
           </div>
-          <div className="mt-6 sm:mt-12 w-full flex flex-col sm:grid grid-cols-3 gap-8">
-            {projects.slice(0, 3).map(project => (
-              <ProjectItem
-                key={project._id}
-                title={project.title}
-                thumbnail={project.img}
-                description={project.desc}
-                tools={project.tools}
-                link={project.link}
-                status={project.status}
-              />
-            ))}
-          </div>
+
+          {projects.length === 0 && <LoadingSpinner height="h-[450px]" />}
+          {projects && (
+            <div className="mt-6 sm:mt-12 w-full flex flex-col sm:grid grid-cols-3 gap-8">
+              {projects.slice(0, 3).map(project => (
+                <ProjectItem
+                  key={project._id}
+                  title={project.title}
+                  thumbnail={project.img}
+                  description={project.desc}
+                  tools={project.tools}
+                  link={project.link}
+                  status={project.status}
+                />
+              ))}
+            </div>
+          )}
         </section>
 
         {/* Skilss */}
@@ -196,19 +201,25 @@ const Home = () => {
               <div className="w-16 h-16 border border-grey absolute bottom-6 right-0"></div>
             </div>
             <div className="h-[400px] flex flex-end flex-wrap lg:flex-wrap-reverse flex-col gap-5 mt-8 ">
-              {categories.map((item, index) => (
-                <div
-                  key={index}
-                  className="w-[170px] text-white text-base"
-                >
-                  <SkillsItems
-                    title={item}
-                    skill={skills
-                      .filter(skill => skill.category === item)
-                      .sort((a, b) => a.skill.localeCompare(b.skill))}
-                  />
+              {categories.length === 0 && (
+                <div className="w-[600px]">
+                  <LoadingSpinner height="h-[400px]" />
                 </div>
-              ))}
+              )}
+              {categories &&
+                categories.map((item, index) => (
+                  <div
+                    key={index}
+                    className="w-[170px] text-white text-base"
+                  >
+                    <SkillsItems
+                      title={item}
+                      skill={skills
+                        .filter(skill => skill.category === item)
+                        .sort((a, b) => a.skill.localeCompare(b.skill))}
+                    />
+                  </div>
+                ))}
             </div>
           </div>
         </section>

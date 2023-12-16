@@ -1,6 +1,7 @@
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import ButtonPrimary from '../components/UI/ButtonPrimary'
 import TypingEffect from './UI/TypingEffect'
+import LoadingSpinner from './UI/LoadingSpinner/LoadingSpinner'
 
 const ProjectItem = props => {
   const parsedTools = JSON.parse(props.tools)
@@ -8,7 +9,17 @@ const ProjectItem = props => {
   if (props.status !== 'null') {
     return (
       <div className="border border-grey flex flex-col">
-        <img src={props.thumbnail} />
+        <div className="max-w-[600px] max-h-[265px]">
+          {props.thumbnail ? (
+            <img
+              width={600}
+              height={365}
+              src={props.thumbnail}
+            />
+          ) : (
+            <LoadingSpinner height="h-[265px]" />
+          )}
+        </div>
         <div className="flex flex-row flex-wrap items-center gap-2 p-2 border-b border-t h-[74px] border-grey text-grey font-light">
           {parsedTools.map((tool, index) => {
             return (
