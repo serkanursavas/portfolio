@@ -19,7 +19,12 @@ function ProjectsContextProvider({ children }) {
 
       setProjects(data.projects)
     }
-    getProjects()
+
+    try {
+      getProjects()
+    } catch (error) {
+      console.log(error)
+    }
   }, [])
 
   const value = {

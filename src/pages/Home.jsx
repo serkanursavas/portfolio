@@ -38,7 +38,11 @@ const Home = () => {
       })
     }
 
-    visitCounterHandler()
+    try {
+      visitCounterHandler()
+    } catch (error) {
+      console.log(error)
+    }
   }, [])
 
   const jsConfetti = new JSConfetti()
