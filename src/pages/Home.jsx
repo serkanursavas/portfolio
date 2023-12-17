@@ -33,7 +33,8 @@ const Home = () => {
     async function visitCounterHandler() {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/counter`, {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'x-api-key': import.meta.env.VITE_API_KEY
         }
       })
     }
