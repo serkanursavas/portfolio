@@ -36,11 +36,11 @@ const ProjectItem = props => {
             )
           })}
         </div>
-        <div className="flex flex-col p-4 gap-4 justify-between ">
+        <div className="flex flex-col p-4 gap-4 justify-between">
           <p className="text-2xl text-white">{props.title}</p>
-          <p className="font-light text-grey">{props.description}</p>
+          <p className="font-light text-grey min-h-[50px] ">{props.description}</p>
 
-          <div className="justify-self-start">
+          <div>
             <ButtonPrimary
               link={props.link}
               name={props.status}
