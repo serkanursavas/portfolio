@@ -31,7 +31,7 @@ const Home = () => {
     document.title = 'Serkan Ursavaş'
 
     async function visitCounterHandler() {
-      const response = await fetch('http://localhost:3000/api/counter', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/counter`, {
         headers: {
           'Content-Type': 'application/json'
         }

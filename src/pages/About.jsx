@@ -87,7 +87,7 @@ const About = () => {
           </div>
         )}
         {categories && (
-          <div className="mt-6  grid grid-cols-2 gap-4 text-sm font-light max-[330px]:text-xs sm:grid-cols-5">
+          <div className="mt-6 grid grid-cols-1 gap-4 text-sm font-light max-[330px]:text-xs sm:grid-cols-5">
             {categories.map((item, index) => (
               <SkillsItems
                 key={index}

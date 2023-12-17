@@ -11,7 +11,7 @@ function SkillsContextProvider({ children }) {
 
   useEffect(() => {
     async function getSkills() {
-      const res = await fetch('http://localhost:3000/api/skills', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/skills`, {
         headers: {
           'Content-Type': 'application/json'
         }

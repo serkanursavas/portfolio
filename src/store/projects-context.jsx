@@ -9,7 +9,7 @@ function ProjectsContextProvider({ children }) {
 
   useEffect(() => {
     const getProjects = async () => {
-      const response = await fetch('http://localhost:3000/api/projects', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/projects`, {
         headers: {
           'Content-Type': 'application/json',
           'x-api-key': import.meta.env.VITE_API_KEY

@@ -45,7 +45,7 @@ const Works = () => {
           <section className="hidden mt-10 space-y-6 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-10 ">
             {projects.map(project => (
               <ProjectItem
-                key={project.id}
+                key={project._id}
                 title={project.title}
                 thumbnail={project.img}
                 description={project.desc}

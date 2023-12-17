@@ -1,24 +1,78 @@
-# Logs
-logs
+# macOS
+.DS_Store
+
+# IDEs and editors
+.idea/
+.vscode/
+
+# Dependency directories
+/node_modules/
+/vendor/
+
+# Build artifacts
+/build/
+/dist/
+/out/
+
+# Logs and databases
 *.log
+*.sqlite
+*.db
+
+# Environment configuration
+.env
+
+# Secret keys and credentials
+secrets.json
+config.js
+
+# API keys
+api_key.js
+
+# Backup files
+*.bak
+*.backup
+*.swp
+
+# System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Windows installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Package manager files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+.pnpm-debug.log*
+.pnpm-*.*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependency files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+composer.lock
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# .gitignore and .gitkeep
+.gitignore
+.gitkeep
+
+# Logs and reports
+logs/
+reports/
+
+# IDE-specific files
+*.iml
+.idea/
+.project
+.classpath
+
+# Temporary files
+.tmp/
+.temp/
+.tmp/

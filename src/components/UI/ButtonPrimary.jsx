@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const ButtonPrimary = props => {
   function viewProjectsHandler() {
     if (props.projectBtn) {
-      fetch('http://localhost:3000/api/projectviews', {
+      fetch(`${import.meta.env.VITE_API_URL}/projectviews`, {
         headers: {
           'Content-Type': 'application/json'
         }
