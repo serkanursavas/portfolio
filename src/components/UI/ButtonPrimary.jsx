@@ -6,7 +6,8 @@ const ButtonPrimary = props => {
     if (props.projectBtn) {
       fetch(`${import.meta.env.VITE_API_URL}/projectviews`, {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'x-api-key': import.meta.env.VITE_API_KEY
         }
       })
     }

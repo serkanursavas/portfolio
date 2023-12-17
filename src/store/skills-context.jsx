@@ -13,7 +13,8 @@ function SkillsContextProvider({ children }) {
     async function getSkills() {
       const res = await fetch(`${import.meta.env.VITE_API_URL}/skills`, {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'x-api-key': import.meta.env.VITE_API_KEY
         }
       })
 
