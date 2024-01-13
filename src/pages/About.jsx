@@ -1,7 +1,7 @@
 import PageTitle from '../components/PageTitle'
 import dots1 from '../assets/dots36.svg'
 import dots2 from '../assets/dots.svg'
-import aboutPic from '../assets/about.png'
+import aboutPic from '../assets/pp.jpg'
 import LoadingSpinner from '../components/UI/LoadingSpinner/LoadingSpinner'
 import SkillsItems from '../components/SkillsItems'
 import AnimatedPage from '../components/UI/AnimatedPage'
@@ -30,7 +30,7 @@ const About = () => {
               modern user-friendly web experiences.
             </p>
             <div className="relative max-w-[170px] basis-2/5 sm:hidden">
-              <img
+              {/* <img
                 className="absolute right-2 top-28 max-w-[52px]"
                 src={dots1}
                 alt="Dots"
@@ -39,13 +39,13 @@ const About = () => {
                 className="absolute -left-2 top-8 max-w-[42px]"
                 src={dots2}
                 alt="Dots"
-              />
+              /> */}
               <img
                 className=""
                 src={aboutPic}
                 alt="About-Me"
               />
-              <div className="w-32 h-[1px] bg-primary absolute bottom-0 left-4"></div>
+              {/* <div className="w-32 h-[1px] bg-primary absolute bottom-0 left-4"></div> */}
             </div>
           </div>
           <p className="mt-4  text-grey text-sm max-[330px]:text-xs sm:text-base sm:leading-7">
@@ -57,22 +57,22 @@ const About = () => {
         </div>
         <div className="relative ">
           <div className="hidden sm:block relative w-full lg:flex lg:justify-center">
-            <img
-              className="absolute right-32 top-72 max-w-[95px] lg:right-24"
+            {/* <img
+              className="absolute right-32  top-72 max-w-[95px] lg:right-24"
               src={dots1}
               alt="Dots"
             />
             <img
-              className="absolute -left-2 top-16 max-w-[90px] lg:left-12"
+              className="absolute -left-162  top-12 max-w-[90px] lg:left-12"
               src={dots2}
               alt="Dots"
-            />
+            /> */}
+
             <img
-              className=""
+              className="relative rounded-sm z-0 w-80 h-w-80 border  border-grey"
               src={aboutPic}
-              alt="About-Me"
+              alt="pp"
             />
-            <div className="w-72 h-[1px] bg-primary absolute bottom-0 left-10 lg:left-24 "></div>
           </div>
         </div>
       </section>

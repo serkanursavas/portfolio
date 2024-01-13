@@ -256,11 +256,6 @@ const Home = () => {
             </div>
             <div className="relative">
               <img
-                className="max-[950px]:hidden"
-                src={aboutPic}
-                alt=""
-              />
-              <img
                 className="absolute right-4 top-64 max-w-[104px]"
                 src={dots1}
                 alt="Dots"
@@ -270,7 +265,6 @@ const Home = () => {
                 src={dots2}
                 alt="Dots"
               />
-              <div className="w-64 h-[1px] bg-primary absolute bottom-0 left-8 max-[950px]:hidden"></div>
             </div>
           </div>
         </section>
