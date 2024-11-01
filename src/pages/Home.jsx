@@ -71,9 +71,7 @@ const Home = () => {
           <div className="mt-8 text-white text-[24px] sm:text-[36px] space-y-6 font-medium sm:leading-[48px]">
             Serkan is a <span className="text-primary">web designer</span> and
             <span className="text-primary"> front-end developer</span>
-            <p className=" text-grey text-sm sm:text-base font-normal">
-              He crafts responsive websites where technologies meet creativity
-            </p>
+            <p className=" text-grey text-sm sm:text-base font-normal">He crafts responsive websites where technologies meet creativity</p>
             <div className="hidden sm:block">
               <ButtonPrimary
                 name="Contact me!!"
@@ -107,8 +105,7 @@ const Home = () => {
             <div className="p-2 border border-grey flex space-x-3 items-center mt-12 sm:hidden">
               <div className=" w-4 h-4 bg-primary"></div>
               <p className=" text-xs sm:text-base text-grey">
-                Currently working on{' '}
-                <span className="text-white font-medium">React-Native</span>
+                Currently working on <span className="text-white font-medium">React-Native</span>
               </p>
             </div>
           </div>
@@ -205,7 +202,7 @@ const Home = () => {
               <div className="w-24 h-24 border border-grey absolute top-0 right-6"></div>
               <div className="w-16 h-16 border border-grey absolute bottom-6 right-0"></div>
             </div>
-            <div className="h-[400px] flex flex-end flex-wrap lg:flex-wrap-reverse flex-col gap-5 mt-8 ">
+            <div className="h-[450px] flex flex-end flex-wrap lg:flex-wrap-reverse flex-col gap-5 mt-8 ">
               {categories.length === 0 && (
                 <div className="w-[600px]">
                   <LoadingSpinner height="h-[400px]" />
@@ -219,9 +216,7 @@ const Home = () => {
                   >
                     <SkillsItems
                       title={item}
-                      skill={skills
-                        .filter(skill => skill.category === item)
-                        .sort((a, b) => a.skill.localeCompare(b.skill))}
+                      skill={skills.filter(skill => skill.category === item).sort((a, b) => a.skill.localeCompare(b.skill))}
                     />
                   </div>
                 ))}
@@ -243,9 +238,8 @@ const Home = () => {
                 </div>
               </div>
               <p className="mt-6 text-grey text-base ">
-                Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana,
-                Turkey. I can develop responsive websites from scratch and raise them into
-                modern user-friendly web experiences.
+                Hello, I'm Serkan! I'm a self-taught front-end developer based in Adana, Turkey. I can develop responsive websites from scratch and
+                raise them into modern user-friendly web experiences.
               </p>
 
               <ButtonPrimary
@@ -282,8 +276,7 @@ const Home = () => {
           </div>
           <div className="flex text-grey gap-24 mt-6">
             <p className="text-base w-[500px] ">
-              I'm interested in freelance opportunities. However, if you have other
-              request or question, don't hesitate to contact me
+              I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate to contact me
             </p>
             <div className="border border-grey p-4 space-y-2 w-fit mt-12">
               <h6 className="text-white font-normal">Message me here</h6>
