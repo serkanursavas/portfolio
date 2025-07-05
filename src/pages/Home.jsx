@@ -69,7 +69,7 @@ const Home = () => {
       <main className="w-full">
         <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-8 sm:items-center lg:gap-24">
           <div className="mt-8 text-white text-[24px] sm:text-[36px] space-y-6 font-medium sm:leading-[48px]">
-            Serkan is a <span className="text-primary">web designer</span> and
+            Serkan is a <span className="text-primary">web developer</span> and
             <span className="text-primary"> front-end developer</span>
             <p className=" text-grey text-sm sm:text-base font-normal">He crafts responsive websites where technologies meet creativity</p>
             <div className="hidden sm:block">
