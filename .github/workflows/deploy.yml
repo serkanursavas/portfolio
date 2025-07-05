@@ -1,0 +1,16 @@
+name: Portfolio Auto Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚀 Repo'yu Kopyala
+        uses: actions/checkout@v3
+      - name: 🔑 VPS'e SSH ile Bağlan ve Deploy Script'i Çalıştır
+        run: |
+          echo "${{ secrets.VPS_SSH_PRIVATE_KEY }}" > private_key
+          chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key serkanursavas@147.93.126.10 -p 2222 "cd /home/serkanursavas/projects/portfolio && ./deploy.sh"
