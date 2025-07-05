@@ -13,6 +13,7 @@ const Works = () => {
 
   useEffect(() => {
     document.title = 'Projects'
+    console.log('test')
   }, [])
 
   const activeProjects = projects
